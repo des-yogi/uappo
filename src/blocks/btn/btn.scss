@@ -1,0 +1,85 @@
+.btn {
+
+  $block-name:                &; // #{$block-name}__element
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 7px 24px;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: $line-height;
+  text-align: center;
+  text-decoration: none;
+  text-transform: none;
+  white-space: nowrap;
+  color: $main-color;
+  border-radius: $border-radius;
+  border: none;
+  background-color: $btn-bg;
+  background-image: none;
+  user-select: none;
+  cursor: pointer;
+  transition: all $transition-time;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    color: $white;
+    background-color: $btn-bg--active;
+    // border-color: darken($gray-lighter, 12%);
+  }
+
+  &:active,
+  &:focus {
+    // @include field-focus;
+  }
+
+  &--disabled,
+  &:disabled {
+    // opacity: $opacity;
+    color: $text-muted;
+    background-color: $btn-bg--disabled;
+    //border-color: $gray-lighter;
+    cursor: not-allowed;
+
+    @at-root a.btn--disabled {
+      pointer-events: none;
+    }
+  }
+
+  svg {
+    margin-right: 8px;
+  }
+
+  &--text {
+    padding-left: 0;
+    padding-right: 0;
+    color: $title-color;
+    background-color: transparent;
+
+    &:hover,
+    &:focus {
+      color: $link-color--hover;
+      background-color: transparent;
+    }
+
+    &--disabled,
+    &:disabled {
+      color: $text-muted;
+      background-color: transparent;
+    }
+  }
+}
+
+form,
+.form {
+
+  .btn {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+}

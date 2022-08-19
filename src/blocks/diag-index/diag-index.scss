@@ -1,0 +1,36 @@
+.diag-index {
+
+  $block-name:                &; // #{$block-name}__element
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(5, auto);
+  grid-column-gap: 0px;
+  grid-row-gap: 24px;
+
+  @media (min-width: $screen-md) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, auto);
+    //grid-column-gap: 24px;
+    //grid-row-gap: 24px;
+  }
+
+  @media (min-width: $screen-xl) {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, auto);
+  }
+
+  &__diag {
+
+    @media (min-width: $screen-md) {
+      grid-area: 1 / 1 / 2 / 3;
+    }
+  }
+
+  &__stat {
+
+    @media (min-width: $screen-xl) {
+
+    }
+  }
+}

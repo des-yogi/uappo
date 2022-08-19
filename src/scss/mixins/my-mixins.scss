@@ -1,0 +1,51 @@
+
+/* // stylelint-disable property-disallowed-list
+@mixin transition($transition...) {
+  @if length($transition) == 0 {
+    $transition: $transition-base;
+  }
+
+  @if length($transition) > 1 {
+    @each $value in $transition {
+      @if $value == null or $value == none {
+        @warn "The keyword 'none' or 'null' must be used as a single argument.";
+      }
+    }
+  }
+
+  @if $enable-transitions {
+    @if nth($transition, 1) != null {
+      transition: $transition;
+    }
+
+    @if $enable-reduced-motion and nth($transition, 1) != null and nth($transition, 1) != none {
+      @media (prefers-reduced-motion: reduce) {
+        transition: none;
+      }
+    }
+  }
+}
+
+// Shared between modals and offcanvases
+@mixin overlay-backdrop($zindex, $backdrop-bg, $backdrop-opacity) {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: $zindex;
+  width: 100vw;
+  height: 100vh;
+  background-color: $backdrop-bg;
+
+  // Fade for backdrop
+  &.fade { opacity: 0; }
+  &.show { opacity: $backdrop-opacity; }
+}
+
+
+// Text truncate
+// Requires inline-block or block for proper styling
+@mixin text-truncate() {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+} */

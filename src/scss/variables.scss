@@ -18,7 +18,8 @@ $color-warning:               hsl(35, 84%, 62%);
 
 //$color-vk:                    #4a76a8;
 //$color-fb:                    #4267b2;
-$color-tw:                      #2CA5E0; // спец. цвет
+$color-tg:                      #2CA5E0; // спец. цвет
+$bg-tg:                         #EAF6FC; // спец. цвет
 //$color-gh:                    #24292e;
 
 
@@ -41,7 +42,6 @@ $btn-bg:                      #EDE9FE; // Color 4
 $btn-bg--active:              #957DFE; // Color 2
 $btn-bg--disabled:            #E2E8F0; // Grey 4
 
-$btn-bg--tw:                  rgba($color-tw, 0.1); // спец. цвет
 
 $border-color:                $main-color;
 $divider-color:               $main-color;

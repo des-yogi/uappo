@@ -1,14 +1,36 @@
 <!--DEV
-
-Для использования этого файла как шаблона:
-
 @ @include('blocks/events-index/events-index.html')
-
-(Нужно убрать пробел между символами @)
-Подробнее: https://www.npmjs.com/package/gulp-file-include
-
-
-
-<div class="events-index">content</div>
-
 -->
+
+<div class="container  events-index">
+  <div class="row">
+
+    <div class="events-index__main-col">
+      <section class="events-index__main">
+
+        <div class="events-index__header">
+          <h2 class="events-index__title">Найбліжчі події</h2>
+          <a class="btn btn--text  events-index__link" href="#">Дивитись усі події</a>
+        </div>
+
+        <div class="row  events-index__content">
+
+          <div class="events-index__event-col">
+            @@include('../../blocks/event-card/event-card.html')
+          </div>
+
+          <div class="events-index__event-col">
+            @@include('../../blocks/event-card/event-card.html')
+          </div>
+
+        </div>
+
+      </section>
+    </div>
+
+    <div class="events-index__aside-col">
+      @@include('../../blocks/support-us/support-us.html')
+    </div>
+
+  </div>
+</div>

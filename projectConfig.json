@@ -39,7 +39,8 @@
     "twitter-widget": [],
     "events-index": [],
     "event-card": [],
-    "support-us": []
+    "support-us": [],
+    "socials": []
   },
   "addCssBefore": [
     "../../node_modules/bootstrap/scss/_functions",

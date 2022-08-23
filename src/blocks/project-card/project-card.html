@@ -1,14 +1,38 @@
 <!--DEV
-
-Для использования этого файла как шаблона:
-
 @ @include('blocks/project-card/project-card.html')
-
-(Нужно убрать пробел между символами @)
-Подробнее: https://www.npmjs.com/package/gulp-file-include
-
-
-
-<div class="project-card">content</div>
-
 -->
+
+<article class="project-card">
+  <div class="embed-responsive embed-responsive--4-3  project-card__img">
+    <picture>
+      <source srcset="img/project-img.webp" type="image/webp">
+      <img src="img/project-img.jpg" width="640" height="480" alt="Текст">
+    </picture>
+  </div>
+  <div class="project-card__text">
+    <h3 class="h4  project-card__title">УАППО в обличчях. Редван Усеінов</h3>
+    <p class="project-card__descr">Українська асоціація представниць правоохоронних органів – це «платформа», яка об’єднує жінок та чоловіків.</p>
+
+    <div class="project-card__btn-wrapper">
+      <ul class="list-nostyled  project-card__media-list">
+        <li class="project-card__media-item">
+          <svg width="20" height="20" role="img" focusable="false" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#youtube"></use></svg>
+          <span class="visually-hidden">Видео</span>
+        </li>
+        <li class="project-card__media-item">
+          <svg width="20" height="20" role="img" focusable="false" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#gallery"></use></svg>
+          <span class="visually-hidden">Галерея</span>
+        </li>
+        <li class="project-card__media-item">
+          <svg width="20" height="20" role="img" focusable="false" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#document-text"></use></svg>
+          <span class="visually-hidden">Документы</span>
+        </li>
+        <li class="project-card__media-item">
+          <svg width="20" height="20" role="img" focusable="false" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#microphone-2"></use></svg>
+          <span class="visually-hidden">Подкаст</span>
+        </li>
+      </ul>
+      <a href="#" class="btn  project-card__link"><span>Читати далі</span></a>
+    </div>
+  </div>
+</article>

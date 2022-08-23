@@ -1,4 +1,9 @@
 .diag-index {
+  margin-bottom: 64px;
+
+  @media (max-width: $screen-xl - 1) {
+    margin-bottom: calc(64px - 16px);
+  }
 
   $block-name:                &; // #{$block-name}__element
 

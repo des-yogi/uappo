@@ -1,11 +1,90 @@
 <!--DEV
-
-Нужно убрать пробел между @-ами:
-
 @ @include('blocks/page-footer/page-footer.html')
-
 -->
 
-<footer class="page-footer" role="contentinfo">
-  page-footer
+<footer class="container  container--std  page-footer">
+  <div class="row">
+
+    <div class="page-footer__header-col">
+      <div class="page-footer__header">
+        <h2 class="h3  page-footer__title">Уаппо</h2>
+        <p class="page-footer__intro">Сайт створено за сприяння Проекту підтримки підготовки поліцейських (PTAP) за фінансування Уряду Канади</p>
+
+        <ul class="list-nostyled  page-footer__sponsors">
+          <li class="page-footer__sponsor">
+            <span class="visually-hidden">Спонсор 1</span>
+            <img src="img/sponsor-1.png" width="116" height="40" alt="Спонсор 1" loading="lazy" decoding="async">
+          </li>
+          <li class="page-footer__sponsor">
+            <span class="visually-hidden">Спонсор 2</span>
+            <img src="img/sponsor-2.png" width="116" height="40" alt="Спонсор 2" loading="lazy" decoding="async">
+          </li>
+          <li class="page-footer__sponsor">
+            <span class="visually-hidden">Спонсор 3</span>
+            <img src="img/sponsor-3.png" width="116" height="40" alt="Спонсор 3" loading="lazy" decoding="async">
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="page-footer__menu-col">
+      <nav class="page-footer__menu">
+        <ul class="list-nostyled  page-footer__menu-list">
+          <li class="page-footer__menu-item">
+            <a href="#" class="page-footer__link">Головна</a>
+          </li>
+          <li class="page-footer__menu-item">
+            <a href="#" class="page-footer__link">Про нас</a>
+          </li>
+          <li class="page-footer__menu-item">
+            <a href="#" class="page-footer__link">Події</a>
+          </li>
+          <li class="page-footer__menu-item">
+            <a href="#" class="page-footer__link">Річна звітність</a>
+          </li>
+          <li class="page-footer__menu-item">
+            <a href="#" class="page-footer__link">Контакти</a>
+          </li>
+          <li class="page-footer__menu-item">
+            <a href="#" class="page-footer__link">Приєднатися</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="page-footer__contacts-col">
+      <ul class="list-nostyled  page-footer__menu-list">
+        <li class="page-footer__menu-item">
+          <a href="tel:+380683006862" class="page-footer__link">
+            <span>+38 (068) 300-68-62</span>
+          </a>
+        </li>
+        <li class="page-footer__menu-item">
+          <a href="tel:+380630736843" class="page-footer__link">
+            <span>+38 (063) 073-68-43</span>
+          </a>
+        </li>
+        <li class="page-footer__menu-item">
+          <a href="mailto:uappo@gmail.com" class="page-footer__link">
+            <span>uappo@gmail.com</span>
+          </a>
+        </li>
+        <li class="page-footer__menu-item">
+          @@include('../../blocks/socials/socials.html')
+        </li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="page-footer__copyrights-wrapper">
+    <a href="#" class="page-footer__link">Політика конфінецийності</a>
+    <a href="#" class="page-footer__link">Захист персональних даних</a>
+    <p class="page-footer__copyrights">
+      <span class="page-footer__copyrights-owner">©&thinsp;2018-2021 Українська Асоціація Представниць Правоохоронних Органів - «УАППО». ­Всі права захищені.</span>
+      <span class="page-footer__copyrights-dev">Розроблено в &nbsp;<a href="https://itdoors.com.ua" target="_blank" rel="nofollow noopener">IT-Doors Outsourcing</a>
+      </span>
+    </p>
+  </div>
+
 </footer>

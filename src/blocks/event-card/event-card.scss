@@ -1,9 +1,37 @@
-// В этом файле должны быть стили для БЭМ-блока event-card, его элементов, 
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
-// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
-
 .event-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
 
   $block-name:                &; // #{$block-name}__element
 
+  &__text {
+    margin-bottom: 16px;
+  }
+
+  &__title {
+    margin-bottom: 8px;
+
+    a {
+      color: inherit;
+
+      &:hover,
+      &:focus {
+        color: $link-color--hover;
+        text-decoration: none;
+      }
+    }
+  }
+
+  &__descr {
+    margin-top: 0;
+    font-size: 14px;
+  }
+
+  &__more-wrapper {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+  }
 }

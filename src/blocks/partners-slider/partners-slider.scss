@@ -1,9 +1,44 @@
-// В этом файле должны быть стили для БЭМ-блока partners-slider, его элементов, 
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
-// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
-
 .partners-slider {
+  padding-top: 36px;
+  padding-bottom: 36px;
+  margin-bottom: 64px;
+  background-color: $btn-bg;
 
   $block-name:                &; // #{$block-name}__element
 
+  .carousel-cell {
+    //margin-right: 24px;
+  }
+
+  &__title {
+    margin-bottom: 48px;
+  }
+
+  &__carousel {
+
+    @media (min-width: $screen-xl) {
+      $padding-min: 32px; // нужный отступ от краев экрана
+      $half-screen-xl: $screen-xl / 2 - $padding-min;
+      padding-left: calc(50% - #{$half-screen-xl});
+      padding-right: calc(50% - #{$half-screen-xl});
+    }
+  }
+
+  &__slide {
+    width: 197px;
+    height: 132px;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-right: 24px;
+    background-color: $white;
+    border-radius: 16px;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: center;
+    }
+  }
 }

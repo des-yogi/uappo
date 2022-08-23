@@ -52,7 +52,6 @@ if(~navigator.appVersion.indexOf("Linux"))cth('linux');
   //<div style="background-image: url('/images/image.webp')" data-bg="/images/image.jpg" data-bg-webp="/images/image.webp"></div>
 }());
 
-// Изоляция без jQuery
 // (function(){
 //   // code
 // }());
@@ -82,4 +81,12 @@ if(~navigator.appVersion.indexOf("Linux"))cth('linux');
 //   return false;
 // });
 
-
+/*(function(){
+  twttr.widgets.createTimeline(
+    {
+      sourceType: "profile",
+      screenName: "uawle"
+    },
+    document.getElementById("twitterContainer")
+  );
+}());*/

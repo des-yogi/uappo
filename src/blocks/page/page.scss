@@ -363,6 +363,10 @@ a {
     padding-top: 48px;
   }
 
+  & > *:last-child {
+    margin-bottom: 0;
+  }
+
   &--index {
     padding-top: 48px;
 

@@ -73,6 +73,23 @@
       background-color: transparent;
     }
   }
+
+  &--tg {
+    color: $color-tg;
+    background-color: $bg-tg;
+
+    &:hover,
+    &:focus {
+      color: $white;
+      background-color: $color-tg;
+    }
+
+    &--disabled,
+    &:disabled {
+      color: $text-muted;
+      background-color: $btn-bg--disabled;
+    }
+  }
 }
 
 form,

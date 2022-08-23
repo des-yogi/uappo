@@ -1,0 +1,23 @@
+.socials {
+  display: inline-flex;
+  align-items: center;
+
+  $block-name:    &; // #{$block-name}__element
+
+  &__item {
+    margin-top: 0;
+    margin-bottom: 0;
+
+    & + & {
+      margin-left: 8px;
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+  }
+}

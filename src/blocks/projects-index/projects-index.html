@@ -1,14 +1,54 @@
 <!--DEV
-
-Для использования этого файла как шаблона:
-
 @ @include('blocks/projects-index/projects-index.html')
-
-(Нужно убрать пробел между символами @)
-Подробнее: https://www.npmjs.com/package/gulp-file-include
-
-
-
-<div class="projects-index">content</div>
-
 -->
+
+<div class="container  projects-index">
+  <div class="row">
+
+    <div class="projects-index__main-col">
+      <section class="projects-index__main">
+
+        <div class="projects-index__header">
+          <h2 class="projects-index__title">Наші проекти</h2>
+          <a class="btn btn--text  projects-index__link" href="#">Дивитись усі проекти</a>
+        </div>
+
+        <div class="row">
+
+          <div class="projects-index__project-col">
+            @@include('../../blocks/project-card/project-card.html')
+          </div>
+
+          <div class="projects-index__project-col">
+            @@include('../../blocks/project-card/project-card.html')
+          </div>
+
+          <div class="projects-index__project-col">
+            @@include('../../blocks/project-card/project-card.html')
+          </div>
+
+        </div>
+
+      </section>
+    </div>
+
+    <div class="projects-index__aside-col">
+      <div class="projects-index__aside">
+        <div class="projects-index__tw-container">
+          <a  class="twitter-timeline"
+              data-dnt="true"
+              data-lang="uk"
+              data-align="center"
+              data-border-color="#ffffff"
+              data-tweet-limit="3"
+              data-chrome="nofooter noborders transparent"
+              href="https://twitter.com/uawle?ref_src=twsrc%5Etfw">Tweets by uawle
+          </a>
+          <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+          <!-- <blockquote class="twitter-tweet" data-dnt="true" data-lang="uk"><p lang="uk" dir="ltr"><a href="https://twitter.com/UAWL?ref_src=twsrc%5Etfw">@uawl</a> presented to representatives of the Global Affairs Canada mission, vision, main tasks and the first achievements of the Ukrainian Association of Women in Law Enforcement 🇺🇦🇨🇦<a href="https://twitter.com/hashtag/UAWLE?src=hash&amp;ref_src=twsrc%5Etfw">#UAWLE</a> <a href="https://twitter.com/hashtag/IAWP?src=hash&amp;ref_src=twsrc%5Etfw">#IAWP</a> <a href="https://twitter.com/hashtag/genderequality?src=hash&amp;ref_src=twsrc%5Etfw">#genderequality</a> <a href="https://twitter.com/hashtag/canada_ukraine_police?src=hash&amp;ref_src=twsrc%5Etfw">#canada_ukraine_police</a> <a href="https://twitter.com/hashtag/PTAP?src=hash&amp;ref_src=twsrc%5Etfw">#PTAP</a> <a href="https://twitter.com/hashtag/womeninpolicing?src=hash&amp;ref_src=twsrc%5Etfw">#womeninpolicing</a><a href="https://twitter.com/CanEmbUkraine?ref_src=twsrc%5Etfw">@CanEmbUkraine</a> <a href="https://t.co/BzM9eFr6yl">pic.twitter.com/BzM9eFr6yl</a></p>&mdash; UAWLE (@uawle) <a href="https://twitter.com/uawle/status/1035883889921863680?ref_src=twsrc%5Etfw">September 1, 2018</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> -->
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

@@ -246,14 +246,14 @@ a {
 .container {
   display: block;
   width: 100%;
-  padding-left: 16px;
-  padding-right: 16px;
+  padding-left: 0;
+  padding-right: 0;
   background: none;
 
-  // @media (min-width: $screen-md) {
-  //   padding-left: 15px;
-  //   padding-right: 15px;
-  // }
+  @media (min-width: $screen-md) {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
 
   @media (min-width: $screen-xl) {
     $padding-min: 32px; // нужный отступ от краев экрана
@@ -262,14 +262,22 @@ a {
     padding-left: calc(50% - #{$half-screen-xl});
     padding-right: calc(50% - #{$half-screen-xl});
   }
+
+  &--std {
+
+    @media (max-width: $screen-md - 1) {
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+  }
 }
 
 // Родитель. Указаны промежутки между ячейками: XS|SM|MD|LG|XL|XXL;
 // @include row($grid-gutter-width, 10px, 12px, 16px, 20px, 26px);
 .row {
   @include row(
-    $xs-grid-gutter:  32px,
-    $sm-grid-gutter:  32px,
+    $xs-grid-gutter:  0,
+    $sm-grid-gutter:  0,
     $md-grid-gutter:  $grid-gutter-width,
     $lg-grid-gutter:  $grid-gutter-width,
     $xl-grid-gutter:  $grid-gutter-width,
@@ -306,19 +314,19 @@ a {
   ::-webkit-scrollbar {
       width: 6px; /* ширина для вертикального скролла */
       height: 6px; /* высота для горизонтального скролла */
-      background-color: $divider-color;
+      background-color: $body-bg;
   }
 
   /* ползунок скроллбара */
   ::-webkit-scrollbar-thumb {
-    background-color: $main-color;
+    background-color: $btn-bg--active;
     border-radius: 8px;
     box-shadow: none;
     //box-shadow: inset 1px 1px 10px #f3faf7;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background-color: darken($main-color, 5%);
+    background-color: $main-color;
   }
 }
 
@@ -338,7 +346,39 @@ a {
 
 .col-test {
   @include col(xs, 12, $grid-columns, 0); // колонка без отступов
+  @include col(xs, 12, $grid-columns, 32px);
   @include col(md, 12);
   @include col(xl, 8);
-  margin-bottom: 24px;
+}
+
+.main {
+  padding-top: 24px;
+  padding-bottom: 64px;
+
+  @media (min-width: $screen-md) {
+    padding-top: 40px;
+  }
+
+  @media (min-width: $screen-xl) {
+    padding-top: 48px;
+  }
+
+  &--index {
+    padding-top: 48px;
+
+    // @media (min-width: $screen-md) {
+    //   padding-top: 32px;
+    // }
+
+    @media (min-width: $screen-xl) {
+      padding-top: 64px;
+    }
+  }
+}
+.publishedon {
+  display: inline-block;
+  vertical-align: baseline;
+  margin: 0;
+  font-size: $font-size-sm;
+  font-weight: 500;
 }

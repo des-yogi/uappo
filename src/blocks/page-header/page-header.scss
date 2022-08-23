@@ -1,8 +1,214 @@
-// В этом файле должны быть стили для БЭМ-блока page-header, его элементов,
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
-// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
-
 .page-header {
 
   $block-name:                &; // #{$block-name}__element
+
+  position: relative;
+  z-index: 10;
+  background-color: $white;
+  padding-bottom: 16px;
+  padding-top: 16px;
+
+  &.is-active::after {
+    opacity: 1;
+  }
+
+  &::after {
+    position: absolute;
+    content: '';
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    box-shadow: 0 0.225em 0.75em rgba($main-color, 0.3);
+    opacity: 0;
+    transition: opacity 0.3s;
+    z-index: -1;
+  }
+
+  &__inner {
+
+    @media (min-width: $screen-xl) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      $padding-min: 32px; // нужный отступ от краев экрана
+      $half-screen-xl: $screen-xl / 2 - $padding-min;
+      padding-left: calc(50% - #{$half-screen-xl});
+      padding-right: calc(50% - #{$half-screen-xl});
+    }
+  }
+
+  &__logo-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @media (min-width: $screen-xl) {
+      flex: 0 0 auto;
+      width: auto;
+      padding: 0;
+      margin-right: 50px;
+    }
+  }
+
+  &__menu-wrapper {
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 2px solid $body-bg;
+
+    @media (min-width: $screen-xl) {
+      flex: 0 1 auto;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: flex-end;
+      margin-top: 0;
+      border-top: none;
+    }
+
+    &.collapse:not(.show) {
+
+      @media (min-width: $screen-xl) {
+        display: flex;
+        width: auto;
+        padding: 0;
+      }
+    }
+  }
+
+  &__serv-menu-wrapper {
+
+    @media (min-width: $screen-md) {
+      display: flex;
+      align-item: center;
+    }
+
+    &--dt-hidden {
+
+      @media (min-width: $screen-xl) {
+        display: none;
+      }
+    }
+  }
+
+  &__serv-menu-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    & > * + * {
+      margin-left: 16px;
+    }
+
+    &--mob-hidden {
+
+      @media (max-width: $screen-md - 1) {
+        display: none;
+      }
+    }
+
+    &--tablet-hidden {
+
+      @media (min-width: $screen-md) {
+        display: none;
+      }
+
+      @media (min-width: $screen-xl) {
+        display: inline-flex;
+        order: 1;
+        margin-left: auto;
+      }
+    }
+  }
+
+  &__btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 40px;
+    min-height: 40px;
+    padding: 8px;
+    line-height: 1;
+    color: $title-color;
+    background-color: $white;
+    border: none;
+    border-radius: $border-radius;
+    user-select: none;
+    cursor: pointer;
+    transition: all $transition-time;
+
+    &:hover,
+    &:focus {
+      color: $btn-bg--active;
+      background-color: $block-bg;
+    }
+
+    &--burger {
+
+      @media (min-width: $screen-md) {
+        margin-left: 16px;
+      }
+    }
+  }
+
+  &__user-name {
+    margin-left: 8px;
+    font-family: $font-family;
+    font-size: 15px;
+    font-weight: 500;
+    text-transform: uppercase;
+    transform: translateY(1px);
+    color: currentColor;
+
+    &:empty {
+      display: none;
+    }
+  }
+
+  &__slogan {
+    display: flex;
+    align-items: center;
+
+    @media (max-width: $screen-md - 1) {
+      flex-direction: column;
+      margin-top: 16px;
+    }
+
+    @media (min-width: $screen-md) {
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: flex-end;
+    }
+
+    @media (min-width: $screen-xl) {
+      flex: 1 0 100%;
+      margin-bottom: 12px;
+    }
+
+    span {
+      font-weight: 500;
+    }
+  }
+
+  &__slogan-text {
+
+    @media (max-width: $screen-md - 1) {
+      flex: 1 1 100%;
+    }
+
+    @media (min-width: $screen-md) {
+      margin-bottom: 0;
+      margin-right: 32px;
+    }
+  }
+}
+
+.sticky {
+  position: sticky;
+  will-change: transform;
+
+  &--top {
+    top: 0;
+  }
 }

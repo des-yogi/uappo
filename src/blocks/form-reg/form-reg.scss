@@ -1,0 +1,12 @@
+.form-reg {
+
+  $block-name:                &; // #{$block-name}__element
+
+  .field-actions {
+    margin-top: 48px;
+  }
+
+  & > *:last-child {
+    margin-bottom: 0;
+  }
+}

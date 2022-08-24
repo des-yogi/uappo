@@ -36,11 +36,15 @@
     "partners-slider": [],
     "join-us-tg": [],
     "membership": [],
-    "twitter-widget": [],
     "events-index": [],
     "event-card": [],
     "support-us": [],
-    "socials": []
+    "socials": [],
+    "article-nav": [],
+    "form-reg": [],
+    "annual-report": [],
+    "text-input": [],
+    "field-file": []
   },
   "addCssBefore": [
     "../../node_modules/bootstrap/scss/_functions",

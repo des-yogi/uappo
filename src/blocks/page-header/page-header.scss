@@ -55,6 +55,7 @@
   &__menu-wrapper {
     margin-top: 16px;
     padding-top: 16px;
+    padding-bottom: 16px;
     border-top: 2px solid $body-bg;
 
     @media (min-width: $screen-xl) {
@@ -75,6 +76,14 @@
         padding: 0;
       }
     }
+
+    &.show {
+      max-height: calc(100vh - 80px);
+      overflow-y: auto;
+    }
+  }
+
+  &__container {
   }
 
   &__serv-menu-wrapper {

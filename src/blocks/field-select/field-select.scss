@@ -1,20 +1,9 @@
-// В этом файле должны быть стили для БЭМ-блока field-select, его элементов,
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
-// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
-
-$gray-lightest:               hsl(0, 0%, 90%);
-$border-color:                hsl(0, 0%, 60%) !default;
-
-$line-height:                 1.375em !default;
-
-$border-radius:               3px !default;
-
 .field-select {
 
   $block-name:                &; // #{$block-name}__element
 
   display: block;
-  margin-bottom: ($line-height / 2);
+  margin-bottom: 32px;
 
   &__name {
     @include field-name;
@@ -28,18 +17,20 @@ $border-radius:               3px !default;
     display: inline-block;
     vertical-align: middle;
     width: 100%;
-    line-height: $line-height;
     padding: $field-padding-vertical $field-padding-horizontal;
     font-size: inherit;
+    font-weight: inherit;
     font-family: inherit;
+    line-height: inherit;
     border: 1px solid $border-color;
     border-radius: $border-radius;
     appearance: none;
-    background-color: #fff;
-    background-image: svg-load('../blocks/field-select/img_to_bg/select-down.svg');
+    color: $title-color;
+    background-color: $white;
+    background-image: svg-load('../blocks/field-select/bg-img/select-down.svg', fill=$border-color);
     background-repeat: no-repeat;
-    background-position: right 0.3em center;
-    background-size: 1.063em 0.688em;
+    background-position: right 12px center;
+    background-size: 20px;
 
     &[multiple] {
       background-image: none;
@@ -50,6 +41,10 @@ $border-radius:               3px !default;
       display: none;
     }
 
+    &:hover {
+      border-color: $link-color--hover;
+    }
+
     &:active,
     &:focus {
       @include field-focus;
@@ -58,7 +53,9 @@ $border-radius:               3px !default;
     &[disabled],
     &[readonly] {
       cursor: default;
-      background-color: $gray-lightest;
+      color: $text-muted;
+      border-color: $text-muted;
+      background-color: $white;
     }
   }
 

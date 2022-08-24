@@ -1,0 +1,185 @@
+<!--DEV
+@ @include('blocks/form-reg/form-reg.html')
+-->
+
+<form id="regForm" class="form-reg" action="" method="post" enctype="multipart/form-data">
+    @@include('../../blocks/text-input/text-input.html', {
+      "id": "id-1",
+      "addClass": "",
+      "type": "text",
+      "name": "surname",
+      "label": "Прізвище",
+      "ifRequired": "required",
+      "errorText": "",
+      "tipText": ""
+    })
+
+    @@include('../../blocks/text-input/text-input.html', {
+      "id": "id-2",
+      "addClass": "text-input__field--invalid",
+      "type": "text",
+      "name": "name",
+      "label": "Ім’я",
+      "ifRequired": "required",
+      "errorText": "Ошибка",
+      "tipText": ""
+    })
+
+    @@include('../../blocks/text-input/text-input.html', {
+      "id": "id-3",
+      "addClass": "",
+      "type": "text",
+      "name": "patronymic",
+      "label": "По-батькові",
+      "ifRequired": "required",
+      "errorText": "",
+      "tipText": ""
+    })
+
+    @@include('../../blocks/field-select/field-select.html')
+
+    @@include('../../blocks/text-input/text-input.html', {
+      "id": "id-6",
+      "addClass": "",
+      "type": "text",
+      "name": "job",
+      "label": "Місце роботи",
+      "ifRequired": "required",
+      "errorText": "",
+      "tipText": "Повна назва вашого місця роботи"
+    })
+
+    @@include('../../blocks/text-input/text-input.html', {
+      "id": "id-7",
+      "addClass": "",
+      "type": "text",
+      "name": "rank",
+      "label": "Звання",
+      "ifRequired": "required",
+      "errorText": "",
+      "tipText": '(Для атестованих працівників). В разі відсутності позначте “не маю”'
+    })
+
+    @@include('../../blocks/text-input/text-input.html', {
+      "id": "id-8",
+      "addClass": "",
+      "type": "email",
+      "name": "email",
+      "label": "Email",
+      "ifRequired": "required",
+      "errorText": "",
+      "tipText": "Офіційна електронна пошта установи, в якій ви працюєте"
+    })
+
+    @@include('../../blocks/text-input/text-input.html', {
+      "id": "id-9",
+      "addClass": "",
+      "type": "text",
+      "name": "position",
+      "label": "Посада",
+      "ifRequired": "required",
+      "errorText": "",
+      "tipText": "Повна назва Вашої посади"
+    })
+
+    @@include('../../blocks/text-input/text-input.html', {
+      "id": "id-10",
+      "addClass": "",
+      "type": "text",
+      "name": "city",
+      "label": "Місто проживання",
+      "ifRequired": "required",
+      "errorText": "",
+      "tipText": "Назва з великої літери!"
+    })
+
+    <div class="field-radio">
+      <div class="field-radio__title">Стать</div>
+      <div class="field-radio__group">
+        <div class="field-radio__input-wrap">
+          <label class="field-radio__name">
+            <input class="field-radio__input" type="radio" name="sex" checked>
+            <span class="field-radio__name-text">Жінка</span>
+          </label>
+        </div>
+        <div class="field-radio__input-wrap">
+          <label class="field-radio__name">
+            <input class="field-radio__input" type="radio" name="sex">
+            <span class="field-radio__name-text">Чоловік</span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <div class="field-radio">
+      <div class="field-radio__title">На який статус членства Ви подаєте заявку</div>
+      <div class="field-radio__group">
+        <div class="field-radio__input-wrap">
+          <label class="field-radio__name">
+            <input class="field-radio__input" type="radio" name="status" checked>
+            <span class="field-radio__name-text">Дійсне</span>
+          </label>
+        </div>
+        <div class="field-radio__input-wrap">
+          <label class="field-radio__name">
+            <input class="field-radio__input" type="radio" name="status">
+            <span class="field-radio__name-text">Асоційоване</span>
+          </label>
+        </div>
+        <div class="field-radio__input-wrap">
+          <label class="field-radio__name">
+            <input class="field-radio__input" type="radio" name="status">
+            <span class="field-radio__name-text">Почесне</span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-input__group">
+      @@include('../../blocks/text-input/text-input.html', {
+        "id": "id-11",
+        "addClass": "phone-mask",
+        "type": "tel",
+        "name": "tel",
+        "label": "Телефон",
+        "ifRequired": "required",
+        "errorText": "",
+        "tipText": "У форматі 380"
+      })
+
+      @@include('../../blocks/text-input/text-input.html', {
+        "id": "id-12",
+        "addClass": "",
+        "type": "email",
+        "name": "email",
+        "label": "Email",
+        "ifRequired": "required",
+        "errorText": "",
+        "tipText": "Для листування з УАППО"
+      })
+    </div>
+
+    <div class="field-file">
+      <div class="field-file__name">Будь ласка, прикріпіть заяву на вступ у форматі PDF або DOC</div>
+      <label class="field-file__input-wrap">
+        <input class="field-file__input" type="file" data-multiple-caption="файлів вибрано: {count}" accept=".doc,.docx,.pdf">
+        <span class="field-file__name-text" data-button-text="Додати файл">
+          <span>Нічого не вибрано</span>
+        </span>
+        <!-- <div class="field-file__help-text">Відображення вибраного файлу(ів)</div> -->
+      </label>
+    </div>
+
+    <div class="field-checkbox form-reg__agreement">
+      <label class="field-checkbox__name">
+        <input class="field-checkbox__input" type="checkbox" name="agreement" checked>
+        <span class="field-checkbox__name-text">Я підтверджую, що інформація, надана у цій заяві є достовірною, і надаю згоду Українській асоціації представниць правоохоронних органів зберігати та використовувати цю інформацію відповідно до мети та завдань, викладених у її Статуті та відповідно до Закону України «Про захист персональних даних» в обсязі, необхідному для обліку членів Асоціації та організаційного забезпечення її діяльності.</span>
+      </label>
+
+      <div class="field-actions">
+        <button class="btn" type="submit">Відправити</button>
+      </div>
+    </div>
+
+
+</form>

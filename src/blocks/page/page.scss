@@ -352,16 +352,16 @@ a {
 }
 
 .main {
-  padding-top: 24px;
+  //padding-top: 24px;
   padding-bottom: 64px;
 
-  @media (min-width: $screen-md) {
-    padding-top: 40px;
-  }
+  // @media (min-width: $screen-md) {
+  //   padding-top: 40px;
+  // }
 
-  @media (min-width: $screen-xl) {
-    padding-top: 48px;
-  }
+  // @media (min-width: $screen-xl) {
+  //   padding-top: 48px;
+  // }
 
   & > *:last-child {
     margin-bottom: 0;
@@ -385,4 +385,53 @@ a {
   margin: 0;
   font-size: $font-size-sm;
   font-weight: 500;
+}
+
+.download-link {
+  display: inline-block;
+  vertical-align: baseline;
+  margin: 0 0 16px;
+  position: relative;
+  padding-left: 36px;
+  line-height: 1.3;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+
+    span:first-of-type {
+      text-decoration: underline;
+    }
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &::before {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 24px;
+    height: 24px;
+    background-size: 24px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: svg-load('../blocks/sprite-svg/svg/document-download.svg', fill=$main-color);
+  }
+
+  span {
+    display: block;
+
+    &:last-of-type {
+      font-size: $font-size-sm;
+      color: $text-muted;
+
+      &:empty {
+        display: none;
+      }
+    }
+  }
 }

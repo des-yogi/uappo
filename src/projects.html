@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="uk" prefix="og: https://ogp.me/ns#">
+
+<head>
+  <meta charset="utf-8">
+  <title>Наші проекти</title>
+  @@include('_include/page_head.html')
+</head>
+
+<body>
+<noscript>У вас отключен JavaScript. Приносим наши извинения, но это делает затруднительным использование данного сайта.</noscript>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+      @@include('blocks/page-header/page-header.html')
+
+      @@include('blocks/breadcrumbs/breadcrumbs.html', {
+        "addClass": ""
+      })
+
+      <main class="main">
+        <div class="container  project-card__wrapper">
+          <div class="row">
+
+            <div class="project-card__heading-col">
+              <div class="header-block">
+                <h1>Наші проекти</h1>
+              </div>
+            </div>
+
+            <div class="project-card__block-col">
+              @@include('blocks/project-card/project-card.html', {
+                "addClass": "project-card--apart"
+              })
+            </div>
+
+            <div class="project-card__block-col">
+              @@include('blocks/project-card/project-card.html', {
+                "addClass": "project-card--apart"
+              })
+            </div>
+
+            <div class="project-card__block-col">
+              @@include('blocks/project-card/project-card.html', {
+                "addClass": "project-card--apart"
+              })
+            </div>
+
+            <div class="project-card__block-col">
+              @@include('blocks/project-card/project-card.html', {
+                "addClass": "project-card--apart"
+              })
+            </div>
+
+            <div class="project-card__block-col">
+              @@include('blocks/project-card/project-card.html', {
+                "addClass": "project-card--apart"
+              })
+            </div>
+
+          </div>
+
+          <div class="project-card__link-wrapper">
+            <a href="#" class="btn"><span>Показати більше</span></a>
+          </div>
+        </div>
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+      @@include('blocks/page-footer/page-footer.html')
+    </div>
+
+  </div>
+
+  @@include('_include/page_bottom.html')
+
+</body>
+</html>

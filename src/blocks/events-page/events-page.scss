@@ -1,0 +1,24 @@
+.events-page {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__calendar-col {
+    @include col(xs, 12, $grid-columns, 0);
+    @include col-offset(md, 1);
+    @include col(md, 10);
+    @include col-offset(lg, 0);
+    @include col(lg, 4);
+
+    @media (max-width: $screen-lg - 1) {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__events-col {
+    @include col(xs, 12, $grid-columns, 0);
+    @include col-offset(md, 1);
+    @include col(md, 10);
+    @include col-offset(lg, 0);
+    @include col(lg, 8);
+  }
+}

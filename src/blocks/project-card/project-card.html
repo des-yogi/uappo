@@ -1,12 +1,23 @@
 <!--DEV
-@ @include('blocks/project-card/project-card.html')
+@ @include('blocks/project-card/project-card.html', {
+  "addClass": "project-card--apart"
+})
 -->
 
-<article class="project-card">
+<article class="project-card  @@addClass">
   <div class="embed-responsive embed-responsive--4-3  project-card__img">
     <picture>
+      <source srcset="img/project-img.webp" media="(min-width: 1366px)" type="image/webp">
+      <source srcset="img/project-img.jpg" media="(min-width: 1366px)">
+      <!-- from 1366 (img size 300x225px) -->
+      <source srcset="img/project-img.webp" media="(min-width: 768px)" type="image/webp">
+      <source srcset="img/project-img.jpg" media="(min-width: 768px)">
+      <!-- from 768 to 1366 (img size 820x615px) -->
+      <source srcset="img/project-img.webp" media="(min-width: 480px)" type="image/webp">
+      <source srcset="img/project-img.jpg" media="(min-width: 480px)">
+      <!-- from 480 to 768 (img size 720x540px) -->
       <source srcset="img/project-img.webp" type="image/webp">
-      <img src="img/project-img.jpg" width="640" height="480" alt="Текст">
+      <img src="img/project-img.jpg" width="640" height="480" alt="Текст" loading="lazy" decoding="async">
     </picture>
   </div>
   <div class="project-card__text">

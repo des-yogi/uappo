@@ -1,0 +1,20 @@
+<!--DEV
+@ @include('blocks/calendar/calendar.html')
+-->
+
+<section id="calendar" class="hello-week  calendar">
+  <h1 class="calendar__title">Календар подій</h1>
+  <div class="calendar__inner">
+    <div class="navigation  calendar__nav">
+      <button class="prev  calendar__nav-btn  calendar__nav-btn--prev" type="button">
+        <span class="visually-hidden">Попередній</span>
+      </button>
+      <div class="period  calendar__period" aria-label="Поточний місяць"></div>
+      <button class="next  calendar__nav-btn  calendar__nav-btn--next" type="button">
+        <span class="visually-hidden">Наступний</span>
+      </button>
+    </div>
+    <div class="week  calendar__week"></div>
+    <div class="month  calendar__month"></div>
+  </div>
+</section>

@@ -44,7 +44,12 @@
     "form-reg": [],
     "annual-report": [],
     "text-input": [],
-    "field-file": []
+    "field-file": [],
+    "events-page": [],
+    "calendar": [],
+    "calendar-event": [],
+    "event-descr": [],
+    "faq-block": []
   },
   "addCssBefore": [
     "../../node_modules/bootstrap/scss/_functions",
@@ -78,7 +83,10 @@
     "./src/img/*.{jpg,jpeg,gif,png,svg,ico,webp}"
   ],
   "copiedCss": [],
-  "copiedJs": [],
+  "copiedJs": [
+    "./src/js/langs/en.json",
+    "./src/js/langs/uk.json"
+  ],
   "dirs": {
     "srcPath": "./src/",
     "buildPath": "./build/",

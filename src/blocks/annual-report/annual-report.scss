@@ -1,9 +1,55 @@
-// В этом файле должны быть стили для БЭМ-блока annual-report, его элементов, 
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
-// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
-
 .annual-report {
 
   $block-name:                &; // #{$block-name}__element
 
+  &__heading-col {
+    @include col(xs, 12, $grid-columns, 0);
+    @include col(md, 12);
+    margin-bottom: 24px;
+  }
+
+  &__block-col {
+    @include col(xs, 12, $grid-columns, 0);
+    @include col(md, 6);
+    margin-bottom: 24px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &:nth-last-child(2) + &:nth-child(even) {
+      @include col(md, 12);
+      @include col(xl, 12);
+    }
+
+    &:nth-last-child(3) + &:nth-child(even) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__block {
+    padding: 16px;
+    background-color: $white;
+    border-radius: $border-radius--xl;
+
+    @media (min-width: $screen-md) {
+      padding: 28px;
+    }
+
+    @media (min-width: $screen-xl) {
+      padding: 36px;
+    }
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    background-color: $block-bg;
+    border-radius: $border-radius--lg;
+
+    @media (min-width: $screen-xl) {
+      padding: 32px;
+    }
+  }
 }

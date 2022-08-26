@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="uk" prefix="og: https://ogp.me/ns#">
+
+<head>
+  <meta charset="utf-8">
+  <title>Контакти</title>
+  @@include('_include/page_head.html')
+</head>
+
+<body>
+<noscript>У вас отключен JavaScript. Приносим наши извинения, но это делает затруднительным использование данного сайта.</noscript>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+      @@include('blocks/page-header/page-header.html')
+
+      @@include('blocks/breadcrumbs/breadcrumbs.html', {
+        "addClass": " breadcrumbs__col--narrow"
+      })
+
+      <main class="main">
+        <div class="container  contacts">
+          <div class="row">
+
+            <div class="contacts__header-col">
+              <div class="header-block">
+                <h1>Контакти</h1>
+              </div>
+            </div>
+
+            <div class="contacts__form-col">
+              <div class="contacts__form-wrapper">
+
+                <h2 id="formHeadings" class="visually-hidden">Форма быстрой связи</h2>
+                <p class="h3  contacts__form-title">Зв’язатись з нами</p>
+                <form id="contactsForm" class="contacts__form" action="" method="post" aria-labelledby="formHeadings">
+
+                  @@include('blocks/text-input/text-input.html', {
+                    "id": "id-1",
+                    "addClass": "",
+                    "type": "text",
+                    "name": "name",
+                    "label": "Ім’я",
+                    "ifRequired": "required",
+                    "errorText": "",
+                    "tipText": ""
+                  })
+
+                  @@include('blocks/text-input/text-input.html', {
+                    "id": "id-2",
+                    "addClass": "",
+                    "type": "email",
+                    "name": "email",
+                    "label": "Email",
+                    "ifRequired": "required",
+                    "errorText": "",
+                    "tipText": ""
+                  })
+
+                  @@include('blocks/text-input/text-input.html', {
+                    "id": "id-3",
+                    "addClass": "phone-mask",
+                    "type": "tel",
+                    "name": "tel",
+                    "label": "Телефон",
+                    "ifRequired": "required",
+                    "errorText": "",
+                    "tipText": ""
+                  })
+
+                  <div class="field-checkbox form-reg__agreement">
+                    <label class="field-checkbox__name">
+                      <input class="field-checkbox__input" type="checkbox" name="agreement" checked>
+                      <span class="field-checkbox__name-text">Я згоден на обробку персональних даних відповідно до <a href="#">Політики конфіденційності</a></span>
+                    </label>
+
+                    <div class="field-actions" style="margin-top:24px;">
+                      <button class="btn" type="submit" style="width:100%;">Відправити</button>
+                    </div>
+                  </div>
+
+                </form>
+              </div>
+            </div>
+
+            <div class="contacts__info-col">
+              <section class="contacts__info">
+                <h4>Інформація</h4>
+
+                <table class="table">
+                  <tbody>
+                    <tr>
+                      <td class="tel">
+                        <span class="contacts__caption  contacts__caption--tel">Телефон</span>
+                      </td>
+                      <td>
+                        <a href="tel:+380630736843">+38 (063) 073-68-43</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="email">
+                        <span class="contacts__caption  contacts__caption--email">Email</span>
+                      </td>
+                      <td>
+                        <a href="mailto:uappo@gmail.com">uappo@gmail.com</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="fb">
+                        <span class="contacts__caption  contacts__caption--fb">Facebook</span>
+                      </td>
+                      <td>
+                        <a href="#" target="_blank" rel="nofollow noopener">www.facebook.com/uawle</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="ytb">
+                        <span class="contacts__caption  contacts__caption--ytb">YouTube</span>
+                      </td>
+                      <td>
+                        <a href="#" target="_blank" rel="nofollow noopener">www.youtube.com/uawle</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="tw">
+                        <span class="contacts__caption  contacts__caption--tw">Twitter</span>
+                      </td>
+                      <td>
+                        <a href="#" target="_blank" rel="nofollow noopener">www.twitter.com/uawle</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="tg">
+                        <span class="contacts__caption  contacts__caption--tg">Telegram</span>
+                      </td>
+                      <td>
+                        <a href="https://t.me/uappo">@uappo</a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </section>
+
+            </div>
+
+          </div>
+        </div>
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+      @@include('blocks/page-footer/page-footer.html')
+    </div>
+
+  </div>
+
+  @@include('_include/page_bottom.html')
+
+</body>
+</html>

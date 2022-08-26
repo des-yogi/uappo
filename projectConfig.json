@@ -49,7 +49,9 @@
     "calendar": [],
     "calendar-event": [],
     "event-descr": [],
-    "faq-block": []
+    "faq-block": [],
+    "contacts": [],
+    "p-404": []
   },
   "addCssBefore": [
     "../../node_modules/bootstrap/scss/_functions",

@@ -209,9 +209,34 @@ abbr[title] {
 }
 
 blockquote {
-  padding: 0;
-  margin-left: 0;
-  margin-right: 0;
+  position: relative;
+  padding: 64px 16px 24px;
+  margin: 48px 0 24px !important;
+  color: $title-color;
+  background-color: $block-bg;
+  border-radius: $border-radius;
+
+  @media (min-width: $screen-md) {
+    padding: 64px 48px 48px;
+  }
+
+  &::before {
+    display: block;
+    content: "";
+    position: absolute;
+    left: 16px;
+    top: -26px;
+    width: 52px;
+    height: 52px;
+    color: $white;
+    border-radius: $border-radius;
+    background-color: $main-color;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 24px;
+    background-image: svg-load('../blocks/sprite-svg/svg/blockquote.svg');
+    box-shadow: 0 8px 18px -8px rgba(99, 102, 241, 0.9);
+  }
 }
 
 dt {

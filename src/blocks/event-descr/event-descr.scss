@@ -1,9 +1,49 @@
-// В этом файле должны быть стили для БЭМ-блока event-descr, его элементов, 
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
-// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
-
 .event-descr {
 
   $block-name:                &; // #{$block-name}__element
 
+  &__col {
+    @include col(xs, 12, $grid-columns, 0);
+    @include col(xl, 12);
+
+    & + & {
+      margin-top: 24px;
+    }
+
+    &--full {
+      @include col(md, 12);
+    }
+
+    &--half {
+      @include col(md, 6);
+    }
+  }
+
+  &__block {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 16px;
+    background-color: $block-bg;
+    border-radius: $border-radius--xl;
+
+    & > span {
+
+      &:first-child {
+        margin-bottom: 4px;
+        color: $main-color;
+      }
+
+      &:last-child {
+        display: inline-flex;
+        flex-wrap: wrap;
+        font-weight: 500;
+        color: $title-color;
+
+        & > * {
+          flex: 1 1 100%;
+        }
+      }
+    }
+  }
 }

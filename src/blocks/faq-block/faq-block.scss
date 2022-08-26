@@ -1,9 +1,66 @@
-// В этом файле должны быть стили для БЭМ-блока faq-block, его элементов, 
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
-// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
-
 .faq-block {
 
   $block-name:                &; // #{$block-name}__element
 
+  &:not(:first-child) {
+    margin-top: 48px;
+  }
+
+  .accordion-item + .accordion-item {
+    margin-top: 24px;
+  }
+
+  .accordion-item {
+    font-family: $font-family;
+    background-color: $block-bg;
+    border-radius: $border-radius !important;
+    //overflow: hidden;
+  }
+
+  .accordion-button {
+    font-size: 16px;
+    font-weight: 500;
+    font-family: inherit;
+    background-color: $block-bg !important;
+    border-radius: $border-radius !important;
+    cursor: pointer;
+
+    &:not(.collapsed) {
+      color: $main-color;
+
+      &::before {
+        transform: translateY(-50%) rotate(180deg);
+      }
+
+      &::after {
+        transform: translateY(-50%) rotate(180deg);
+      }
+    }
+
+    &::after,
+    &::before {
+      display: block;
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: 16px;
+      width: 20px;
+      height: 2px;
+      background-color: $main-color;
+      background-image: none;
+      transition: transform $transition-time;
+    }
+
+    &::after {
+      transform: translateY(-50%);
+    }
+
+    &::before {
+      transform: translateY(-50%) rotate(90deg);
+    }
+  }
+
+  .accordion-collapse {
+    font-family: inherit;
+  }
 }

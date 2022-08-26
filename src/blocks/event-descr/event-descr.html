@@ -1,14 +1,55 @@
 <!--DEV
-
-Для использования этого файла как шаблона:
-
 @ @include('blocks/event-descr/event-descr.html')
-
-(Нужно убрать пробел между символами @)
-Подробнее: https://www.npmjs.com/package/gulp-file-include
-
-
-
-<div class="event-descr">content</div>
-
 -->
+
+<section class="event-descr">
+  <h2 class="visually-hidden">Опис події (дата, час місце тощо)</h2>
+
+  <div class="row">
+
+    <div class="event-descr__col  event-descr__col--full">
+      @@include('../../blocks/countdown/countdown.html', {
+        "deadline": "09 31 2022 18:59:00 GMT+0300"
+      })
+    </div>
+
+    <div class="event-descr__col  event-descr__col--half">
+      <p class="event-descr__block">
+        <span>Ментор</span>
+        <span>Катерина Спирідонова</span>
+      </p>
+    </div>
+
+    <div class="event-descr__col  event-descr__col--half">
+      <p class="event-descr__block">
+        <span>Тип</span>
+        <span>Онлайн</span>
+      </p>
+    </div>
+
+    <div class="event-descr__col  event-descr__col--half">
+      <p class="event-descr__block">
+        <span>Дата</span>
+        <span>
+          <span>з <time datetime="YYYY-MM-DD H:m">27 Вересня, 2022</time></span>
+          <span>по <time datetime="YYYY-MM-DD H:m">31 Вересня, 2022</time></span>
+        </span>
+      </p>
+    </div>
+
+    <div class="event-descr__col  event-descr__col--half">
+      <p class="event-descr__block">
+        <span>Місто</span>
+        <span>Київ</span>
+      </p>
+    </div>
+
+    <div class="event-descr__col  event-descr__col--full">
+      <p class="event-descr__block">
+        <span>Адреса</span>
+        <span>вул. Михайла Максимовича, 3Г</span>
+      </p>
+    </div>
+
+  </div>
+</section>

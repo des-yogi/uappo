@@ -1,0 +1,166 @@
+.contacts {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__header-col {
+    @include col(xs, 12, $grid-columns, 0);
+    @include col-offset(md, 1);
+    @include col(md, 10);
+    @include col-offset(xl, 0);
+    @include col(xl, 12);
+    margin-bottom: 24px;
+  }
+
+  &__form-col,
+  &__info-col {
+    @include col(xs, 12, $grid-columns, 0);
+    @include col-offset(md, 1);
+    @include col(md, 10);
+    @include col-offset(xl, 0);
+    @include col(xl, 6);
+  }
+
+  &__form-col {
+
+    @media (max-width: $screen-xl - 1) {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__form-wrapper {
+    height: 100%;
+    padding: 24px 16px;
+    background-color: $white;
+    border-radius: $border-radius--xl;
+
+    @media (min-width: $screen-md) {
+      padding: 36px;
+    }
+  }
+
+  &__form-title {
+    margin-top: 0;
+  }
+
+  &__info {
+    height: 100%;
+    padding: 24px 16px;
+    background-color: $white;
+    border-radius: $border-radius--xl;
+
+    @media (min-width: $screen-md) {
+      padding: 36px;
+    }
+  }
+
+  &__caption {
+    display: block;
+    position: relative;
+
+    @media (max-width: 412px - 1) {
+      font-size: 0;
+      color: $white;
+    }
+  }
+
+  .table {
+    border: none;
+
+    td,
+    th {
+      padding-top: 14px;
+      padding-bottom: 14px;
+      padding-left: 32px;
+      text-align: initial;
+      color: $title-color;
+      border: none;
+
+      &:first-child {
+        position: relative;
+
+        &::before {
+          display: block;
+          content: "";
+          position: absolute;
+          top: 50%;
+          //left: -32px;
+          left: 0;
+          transform: translateY(-52%);
+          width: 24px;
+          height: 24px;
+          background-color: transparent;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: 24px;
+        }
+
+        &.tel {
+
+          &::before {
+            background-image: svg-load('../blocks/sprite-svg/svg/call.svg', fill=$title-color);
+          }
+        }
+
+        &.email {
+
+          &::before {
+            background-image: svg-load('../blocks/sprite-svg/svg/sms.svg', fill=$title-color);
+          }
+        }
+
+        &.fb {
+
+          &::before {
+            background-image: svg-load('../blocks/sprite-svg/svg/facebook.svg', fill=$title-color);
+          }
+        }
+
+        &.ytb {
+
+          &::before {
+            background-image: svg-load('../blocks/sprite-svg/svg/youtube.svg', fill=$title-color);
+          }
+        }
+
+        &.tw {
+
+          &::before {
+            background-image: svg-load('../blocks/sprite-svg/svg/twitter.svg', fill=$title-color);
+          }
+        }
+
+        &.tg {
+
+          &::before {
+            background-image: svg-load('../blocks/sprite-svg/svg/telegram.svg', fill=$title-color);
+          }
+        }
+      }
+
+      &:last-child {
+        position: relative;
+        font-weight: 500;
+
+        @media (max-width: 412px - 1) {
+          font-size: $font-size-sm;
+        }
+
+        &::before {
+          display: block;
+          content: "";
+          position: absolute;
+          top: 50%;
+          left: 0;
+          transform: translateY(-50%);
+          width: 15px;
+          height: 2px;
+          background-color: currentColor;
+        }
+
+        a {
+          color: inherit;
+        }
+      }
+    }
+  }
+}

@@ -1,9 +1,3 @@
-// $font-family:       'Roboto', 'Ubuntu', 'Droid Sans', 'Helvetica Neue', 'Arial', sans-serif !default;
-
-$font-size--h3:               1.5em !default;
-
-$line-height:                 1.375em !default;
-
 .form {
 
   $block-name:                &; // #{$block-name}__element
@@ -29,5 +23,45 @@ $line-height:                 1.375em !default;
     font-weight: 700;
     line-height: $line-height;
     color: currentColor;
+  }
+
+  &--search {
+    transform: translateY(-70px);
+
+    @media (min-width: $screen-md) {
+      transform: translateY(-80px);
+    }
+  }
+
+  &__search-input {
+    width: 100%;
+    font-size: 48px;
+    font-family: inherit;
+    text-align: center;
+    line-height: $line-height;
+    color: $text-muted;
+    border: none;
+    appearance: textfield;
+
+    @media (min-width: $screen-md) {
+      font-size: 64px;
+    }
+
+    &:hover,
+    &:focus {
+      color: $title-color;
+      outline: none;
+    }
+  }
+
+  &__group {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+
+      & > * {
+        margin-bottom: 0;
+      }
   }
 }

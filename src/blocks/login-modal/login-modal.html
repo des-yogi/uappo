@@ -1,0 +1,61 @@
+<!--DEV
+@ @include('blocks/login-modal/login-modal.html', {
+  "addClass": "login-modal--register",
+  "addId": "",
+  "modalName": ""
+})
+-->
+
+<!-- Login Modal -->
+<div class="modal fade  login-modal  @@addClass" id="@@addIdModal" tabindex="-1" aria-labelledby="@@addIdModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="h4 modal-title" id="@@addIdModalLabel">@@modalName</h5>
+        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close"><span></span></button>
+      </div>
+      <div class="modal-body  login-modal__body">
+        <form class="form  login-modal__form" action="" method="post">
+
+          @@include('../../blocks/text-input/text-input.html', {
+            "id": "@@addId-1",
+            "addClass": "",
+            "type": "email",
+            "name": "email",
+            "label": "Email",
+            "ifRequired": "required",
+            "errorText": "",
+            "tipText": ""
+          })
+
+          <div class="text-input">
+            <div class="text-input__wrapper">
+              <a class="text-input__eye" title="Перемикач видимості пароля"></a>
+              <input id="@@addId-2" class="text-input__field" type="password" name="password" value="" onblur="this.setAttribute('value', this.value);">
+              <label class="text-input__label" for="@@addId-2">
+                <span class="text-input__label-content">Пароль</span>
+              </label>
+            </div>
+            <span class="text-input__error"></span>
+          </div>
+
+          <div class="form__group">
+            <div class="field-checkbox">
+              <label class="field-checkbox__name">
+                <input class="field-checkbox__input" type="checkbox" checked>
+                <span class="field-checkbox__name-text">Запам'ятати мене</span>
+              </label>
+            </div>
+            <a href="#" class="btn btn--text"><span>Нагадати пароль</span></a>
+          </div>
+
+          <div class="login-modal__btns">
+            <button class="btn" type="submit"><span>Увійти</span></button>
+            <button class="btn btn--text" type="button" data-bs-target="#registerModal" data-bs-toggle="modal"><span>Зареєструватись</span></button>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

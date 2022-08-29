@@ -90,6 +90,23 @@
       background-color: $btn-bg--disabled;
     }
   }
+
+  &--danger {
+    color: $color-danger;
+    background-color: $color-warning;
+
+    &:hover,
+    &:focus {
+      color: $white;
+      background-color: $color-danger;
+    }
+
+    &--disabled,
+    &:disabled {
+      color: $text-muted;
+      background-color: $btn-bg--disabled;
+    }
+  }
 }
 
 /* form,

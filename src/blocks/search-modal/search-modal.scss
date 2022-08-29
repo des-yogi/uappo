@@ -1,0 +1,16 @@
+.search-modal {
+
+  $block-name:                &; // #{$block-name}__element
+
+
+  &__body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+
+    @media (min-width: $screen-md) {
+      padding: 40px;
+    }
+  }
+}

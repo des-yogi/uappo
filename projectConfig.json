@@ -51,7 +51,17 @@
     "event-descr": [],
     "faq-block": [],
     "contacts": [],
-    "p-404": []
+    "p-404": [],
+    "search-modal": [],
+    "login-modal": [],
+    "search-result": [],
+    "user-account": [],
+    "user-account-nav": [],
+    "user-account-ads": [],
+    "user-account-fee": [],
+    "user-account-profile": [],
+    "user-account-notice": [],
+    "user-account-education": []
   },
   "addCssBefore": [
     "../../node_modules/bootstrap/scss/_functions",

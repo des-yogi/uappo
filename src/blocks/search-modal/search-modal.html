@@ -1,0 +1,22 @@
+<!--DEV
+@ @include('blocks/search-modal/search-modal.html')
+-->
+
+<!-- Search Modal (fullscreen ) -->
+<div class="modal fade  search-modal" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
+  <div class="modal-dialog  modal-fullscreen">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title visually-hidden" id="searchModalLabel">Пошук по сайту</h5>
+        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close"><span></span></button>
+      </div>
+      <div class="modal-body  search-modal__body">
+        <form id="searchFormModal" class="form  form--search" action="" method="post">
+          <label>
+            <input class="form__search-input" type="search" name="serch" value="" placeholder="Пошук...">
+          </label>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

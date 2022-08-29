@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="uk" prefix="og: https://ogp.me/ns#">
+
+<head>
+  <meta charset="utf-8">
+  <title>Контакти</title>
+  @@include('_include/page_head.html')
+</head>
+
+<body>
+<noscript>У вас отключен JavaScript. Приносим наши извинения, но это делает затруднительным использование данного сайта.</noscript>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+      @@include('blocks/page-header/page-header.html')
+
+      @@include('blocks/breadcrumbs/breadcrumbs.html', {
+        "addClass": " breadcrumbs__col--search"
+      })
+
+      <main class="main">
+        @@include('blocks/search-result/search-result.html')
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+      @@include('blocks/page-footer/page-footer.html')
+    </div>
+
+  </div>
+
+  @@include('blocks/search-modal/search-modal.html')
+
+  @@include('blocks/login-modal/login-modal.html', {
+    "addClass": "",
+    "addId": "login",
+    "modalName": "Вхід"
+  })
+
+  @@include('blocks/login-modal/login-modal.html', {
+    "addClass": "login-modal--register",
+    "addId": "register",
+    "modalName": "Зареєструватись"
+  })
+
+  @@include('_include/page_bottom.html')
+
+</body>
+</html>

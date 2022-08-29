@@ -1,0 +1,17 @@
+.login-modal {
+
+  $block-name:                &; // #{$block-name}__element
+
+
+  &__btns {
+    margin-top: 24px;
+
+    .btn {
+      width: 100%;
+    }
+
+    .btn + .btn {
+      margin-top: 24px;
+    }
+  }
+}

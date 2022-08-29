@@ -156,6 +156,20 @@
 
   </div>
 
+  @@include('blocks/search-modal/search-modal.html')
+
+  @@include('blocks/login-modal/login-modal.html', {
+    "addClass": "",
+    "addId": "login",
+    "modalName": "Вхід"
+  })
+
+  @@include('blocks/login-modal/login-modal.html', {
+    "addClass": "login-modal--register",
+    "addId": "register",
+    "modalName": "Зареєструватись"
+  })
+
   @@include('_include/page_bottom.html')
 
 </body>

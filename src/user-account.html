@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="uk" prefix="og: https://ogp.me/ns#">
+
+<head>
+  <meta charset="utf-8">
+  <title>Кабінет користувача</title>
+  @@include('_include/page_head.html')
+</head>
+
+<body>
+<noscript>У вас отключен JavaScript. Приносим наши извинения, но это делает затруднительным использование данного сайта.</noscript>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+      @@include('blocks/page-header/page-header.html')
+
+      <main class="main  main--index">
+
+        <div class="container  user-account">
+          <h1 class="visually-hidden">Кабінет користувача</h1>
+
+          <div class="row">
+
+            <div class="user-account__main-col">
+              <div class="user-account__main">
+                <div class="row">
+
+                  <div class="user-account__content-col">
+
+                    <div class="tab-content" id="accountTabContent">
+                      <div class="tab-pane fade show active" id="notice" role="tabpanel" aria-labelledby="notice-tab">
+                        @@include('blocks/user-account-notice/user-account-notice.html')
+                      </div>
+                      <div class="tab-pane fade" id="education" role="tabpanel" aria-labelledby="education-tab">
+                        @@include('blocks/user-account-education/user-account-education.html', {
+                          "title": "Моє навчання"
+                        })
+
+                      </div>
+                      <div class="tab-pane fade" id="media" role="tabpanel" aria-labelledby="media-tab">
+                        @@include('blocks/user-account-education/user-account-education.html', {
+                          "title": "Медіатека"
+                        })
+                      </div>
+                      <div class="tab-pane fade" id="policy" role="tabpanel" aria-labelledby="policy-tab">
+                        @@include('blocks/user-account-education/user-account-education.html', {
+                          "title": "Політики та процедури",
+                          "hidden": "style='display:none;'",
+                        })
+                      </div>
+                      <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                        @@include('blocks/user-account-profile/user-account-profile.html')
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <div class="user-account__right-sidebar-col">
+                    @@include('blocks/user-account-ads/user-account-ads.html', {
+                      "title": "Особистий профайл"
+                    })
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+            <div class="user-account__left-sidebar-col">
+
+              <div class="user-account__left-sidebar">
+
+                <section class="user-account-nav">
+                  <ul class="nav user-account-nav__list" id="accountTab" role="tablist" aria-orientation="vertical">
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link active" id="notice-tab" data-bs-toggle="tab" data-bs-target="#notice" type="button" role="tab" aria-controls="notice" aria-selected="true">
+                        <svg width="24" height="24" role="img" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#note"></use></svg>
+                        <span>Анонси</span>
+                      </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link" id="education-tab" data-bs-toggle="tab" data-bs-target="#education" type="button" role="tab" aria-controls="education" aria-selected="false">
+                        <svg width="24" height="24" role="img" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#teacher"></use></svg>
+                        <span>Моє навчання</span>
+                      </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link" id="media-tab" data-bs-toggle="tab" data-bs-target="#media" type="button" role="tab" aria-controls="media" aria-selected="false">
+                        <svg width="24" height="24" role="img" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#gallery"></use></svg>
+                        <span>Медіатека</span>
+                      </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link" id="policy-tab" data-bs-toggle="tab" data-bs-target="#policy" type="button" role="tab" aria-controls="policy" aria-selected="false">
+                        <svg width="24" height="24" role="img" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#document-text"></use></svg>
+                        <span>Політики та процедури</span>
+                      </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">
+                        <svg width="24" height="24" role="img" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#frame"></use></svg>
+                        <span>Особистий профайл</span>
+                      </button>
+                    </li>
+                  </ul>
+                </section>
+
+                @@include('blocks/user-account-fee/user-account-fee.html')
+
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+      @@include('blocks/page-footer/page-footer.html')
+    </div>
+
+  </div>
+
+  @@include('blocks/search-modal/search-modal.html')
+
+  @@include('blocks/login-modal/login-modal.html', {
+    "addClass": "",
+    "addId": "login",
+    "modalName": "Вхід"
+  })
+
+  @@include('blocks/login-modal/login-modal.html', {
+    "addClass": "login-modal--register",
+    "addId": "register",
+    "modalName": "Зареєструватись"
+  })
+
+  @@include('_include/page_bottom.html')
+
+</body>
+</html>

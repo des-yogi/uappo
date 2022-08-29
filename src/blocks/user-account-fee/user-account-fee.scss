@@ -1,0 +1,16 @@
+.user-account-fee {
+
+  $block-name:                &; // #{$block-name}__element
+
+  padding: 24px 16px;
+  background-color: $white;
+  border-radius: $border-radius--xl;
+
+  @media (min-width: $screen-md) {
+    padding: 24px;
+  }
+
+  &__title {
+    color: $main-color;
+  }
+}

@@ -25,6 +25,13 @@
       @include col-offset(xl, 0);
       @include col(xl, 12);
     }
+
+    &--search {
+      @include col-offset(md, 1);
+      @include col(md, 10);
+      @include col-offset(xl, 2);
+      @include col(xl, 8);
+    }
   }
 
   &__list {

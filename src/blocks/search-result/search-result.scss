@@ -1,0 +1,45 @@
+.search-result {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__inner-col {
+    @include col(xs, 12, $grid-columns, 0);
+    @include col-offset(md, 1);
+    @include col(md, 10);
+    @include col-offset(xl, 2);
+    @include col(xl, 8);
+  }
+
+  &__content {
+    padding: 24px 16px;
+    margin-top: 24px;
+    background-color: $white;
+    border-radius: $border-radius--xl;
+
+    @media (min-width: $screen-md) {
+      padding: 24px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    margin: 0;
+    background-color: $block-bg;
+    border-radius: $border-radius--xl;
+
+    & + & {
+      margin-top: 24px;
+    }
+
+    .btn {
+      margin-left: auto;
+      margin-top: 24px;
+    }
+  }
+
+  &__context {
+    margin: 0;
+  }
+}

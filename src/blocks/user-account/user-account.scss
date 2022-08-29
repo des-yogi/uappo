@@ -1,0 +1,77 @@
+.user-account {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__left-sidebar-col {
+    @include col(xs, 12, $grid-columns, 0);
+    @include col(md, 5);
+    @include col(xl, 3);
+
+    @media (max-width: $screen-md - 1) {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__main-col {
+    @include col(xs, 12, $grid-columns, 0);
+    @include col(md, 7);
+    @include col(xl, 9);
+    order: 1;
+  }
+
+  &__content-col {
+    @include col(xs, 12, $grid-columns, 0);
+    @include col(md, 12);
+    @include col(xl, 8);
+
+    @media (max-width: $screen-xl - 1) {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__right-sidebar-col {
+    @include col(xs, 12, $grid-columns, 0);
+    @include col(md, 12);
+    @include col(xl, 4);
+  }
+
+  &__left-sidebar {
+
+    @media (min-width: $screen-md) {
+      position: sticky;
+      top: 105px;
+    }
+
+    @media (min-width: $screen-xl) {
+      top: 160px;
+    }
+
+    & > * + * {
+      margin-top: 24px;
+    }
+  }
+
+  &__inner-content {
+
+    .btn {
+      width: 100%;
+      margin-top: 24px;
+    }
+  }
+
+  &__inner-item {
+    padding: 24px 16px;
+    margin-top: 0;
+    margin-bottom: 24px;
+    background-color: $block-bg;
+    border-radius: $border-radius--xl;
+
+    @media (min-width: $screen-md) {
+      padding: 24px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

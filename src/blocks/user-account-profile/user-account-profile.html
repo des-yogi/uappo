@@ -1,0 +1,25 @@
+<!--DEV
+@ @include('blocks/user-account-profile/user-account-profile.html', {
+  "title": ""
+})
+-->
+
+<section class="user-account-profile">
+  <h2 class="visually-hidden  user-account-education__title">@@title</h2>
+  <div class="user-account-profile__header">
+    <div class="embed-responsive embed-responsive--1-1  user-account-profile__photo">
+      <img src="img/profile-photo.jpg" width="152" height="152" alt="User name">
+    </div>
+    <div class="user-account-profile__descr">
+      <h3 class="h4  user-account-profile__name">Катерина Павліченко</h3>
+      <div class="user-account-profile__downloads">Строка</div>
+    </div>
+  </div>
+  <div class="user-account-profile__body">
+
+  </div>
+  <div class="user-account-profile__footer">
+    <button class="btn  user-account-profile__edit" type="submit"><span>Редагувати</span></button>
+    <button class="btn  btn--danger  user-account-profile__exit" type="button"><span>Вийти</span></button>
+  </div>
+</section>

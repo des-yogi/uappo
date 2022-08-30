@@ -12,17 +12,18 @@
 
   &__header {
     display: flex;
-    flex-wrap: wrap;
+    //flex-wrap: wrap;
+    margin-bottom: 24px;
   }
 
   &__photo {
     flex: 0 0 64px;
-    margin-right: 24px;
+    width: 64px;
+    height: 64px;
+    margin-right: 16px;
     border-radius: $border-radius;
 
     img {
-      width: 64px;
-      height: 64px;
       object-fit: contain;
       object-position: center;
     }
@@ -40,7 +41,77 @@
   }
 
   &__downloads {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
 
+    & > * {
+      margin-bottom: 0;
+    }
+
+    .btn.btn--text {
+
+      svg {
+        margin-right: 0;
+      }
+
+      & > span {
+        @media (max-width: 992px - 1) {
+          display: none;
+        }
+      }
+
+    }
+  }
+
+  &__item-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 16px;
+    font-size: $font-size-sm;
+    color: $title-color;
+
+    @media (min-width: $screen-lg) {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__item-name {
+    flex: 1 1 100%;
+    margin-bottom: 4px;
+
+    @media (min-width: $screen-lg) {
+      flex: 0 0 45%;
+      margin-bottom: 0;
+    }
+  }
+
+  &__item-value {
+    flex: 1 1 100%;
+    font-weight: 500;
+
+    @media (min-width: $screen-lg) {
+      flex: 0 0 55%;
+      position: relative;
+      padding-left: 40px;
+    }
+
+    &::before {
+
+      @media (min-width: $screen-lg) {
+        display: block;
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        width: 15px;
+        height: 2px;
+        background-color: currentColor;
+      }
+    }
   }
 
   &__footer {

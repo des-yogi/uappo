@@ -6,20 +6,93 @@
 
 <section class="user-account-profile">
   <h2 class="visually-hidden  user-account-education__title">@@title</h2>
-  <div class="user-account-profile__header">
-    <div class="embed-responsive embed-responsive--1-1  user-account-profile__photo">
-      <img src="img/profile-photo.jpg" width="152" height="152" alt="User name">
-    </div>
-    <div class="user-account-profile__descr">
-      <h3 class="h4  user-account-profile__name">Катерина Павліченко</h3>
-      <div class="user-account-profile__downloads">Строка</div>
-    </div>
-  </div>
-  <div class="user-account-profile__body">
 
-  </div>
-  <div class="user-account-profile__footer">
-    <button class="btn  user-account-profile__edit" type="submit"><span>Редагувати</span></button>
-    <button class="btn  btn--danger  user-account-profile__exit" type="button"><span>Вийти</span></button>
-  </div>
+  <form id="userProfile" action="" method="post">
+
+    <div class="user-account-profile__header">
+      <div class="embed-responsive embed-responsive--1-1  user-account-profile__photo">
+        <img src="img/profile-photo.jpg" width="152" height="152" alt="User name">
+      </div>
+      <div class="user-account-profile__descr">
+        <h3 class="h4  user-account-profile__name">Катерина Павліченко</h3>
+        <div class="user-account-profile__downloads">
+          <a href="#" class="download-link" download>
+            <span><span class="download-link__hidden-xs">Завантажити </span>Квиток</span>
+            <span></span>
+          </a>
+          <button class="btn  btn--text" type="button" aria-label="QR code" data-bs-toggle="modal" data-bs-target="#qrcodeModal">
+            <span style="margin-right:8px;">QR код</span>
+            <svg width="24" height="24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#qrcode"></use></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="user-account-profile__body">
+      <div class="user-account-profile__item-wrapper">
+        <span class="user-account-profile__item-name">Регіональний координатор</span>
+        <span class="user-account-profile__item-value">Any name</span>
+      </div>
+      <div class="user-account-profile__item-wrapper">
+        <span class="user-account-profile__item-name">Номер членського квитка</span>
+        <span class="user-account-profile__item-value">421415</span>
+      </div>
+      <div class="user-account-profile__item-wrapper">
+        <span class="user-account-profile__item-name">Прізвище</span>
+        <span class="user-account-profile__item-value">Павліченко</span>
+      </div>
+      <div class="user-account-profile__item-wrapper">
+        <span class="user-account-profile__item-name">Ім’я</span>
+        <span class="user-account-profile__item-value">Катерина</span>
+      </div>
+      <div class="user-account-profile__item-wrapper">
+        <span class="user-account-profile__item-name">По-батькові</span>
+        <span class="user-account-profile__item-value">Володимирівна</span>
+      </div>
+      <div class="user-account-profile__item-wrapper">
+        <span class="user-account-profile__item-name">Регіон</span>
+        <span class="user-account-profile__item-value">Київська область</span>
+      </div>
+      <div class="user-account-profile__item-wrapper">
+        <span class="user-account-profile__item-name">Агенція</span>
+        <span class="user-account-profile__item-value">Міністерство внутрішніх справ Украіни</span>
+      </div>
+
+      <div class="user-account-profile__item-wrapper">
+        <span class="user-account-profile__item-name">Номер членського квитка</span>
+        <span class="user-account-profile__item-value">421415</span>
+      </div>
+      <div class="user-account-profile__item-wrapper">
+        <span class="user-account-profile__item-name">Прізвище</span>
+        <span class="user-account-profile__item-value">Павліченко</span>
+      </div>
+      <div class="user-account-profile__item-wrapper">
+        <span class="user-account-profile__item-name">Ім’я</span>
+        <span class="user-account-profile__item-value">Катерина</span>
+      </div>
+      <div class="user-account-profile__item-wrapper">
+        <span class="user-account-profile__item-name">По-батькові</span>
+        <span class="user-account-profile__item-value">Володимирівна</span>
+      </div>
+      <div class="user-account-profile__item-wrapper">
+        <span class="user-account-profile__item-name">Регіон</span>
+        <span class="user-account-profile__item-value">Київська область</span>
+      </div>
+      <div class="user-account-profile__item-wrapper">
+        <span class="user-account-profile__item-name">Агенція</span>
+        <span class="user-account-profile__item-value">Міністерство внутрішніх справ Украіни</span>
+      </div>
+    </div>
+
+    <div class="user-account-profile__footer">
+      <button class="btn  user-account-profile__edit" type="submit">
+        <span>Редагувати</span>
+      </button>
+      <button class="btn  btn--danger  user-account-profile__exit" type="button">
+        <span>Вийти</span>
+      </button>
+    </div>
+
+  </form>
+
 </section>

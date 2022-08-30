@@ -138,6 +138,23 @@
     "modalName": "Зареєструватись"
   })
 
+  <!-- QR Code Modal for current page -->
+  <div class="modal fade  modal--qrcode" id="qrcodeModal" tabindex="-1" aria-labelledby="qrcodeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="qrcodeModalLabel">QR Код</h5>
+          <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+            <span></span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <img src="img/qr-code.svg" alt="QR code" width="300" height="300">
+        </div>
+      </div>
+    </div>
+  </div>
+
   @@include('_include/page_bottom.html')
 
 </body>

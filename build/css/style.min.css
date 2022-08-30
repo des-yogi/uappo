@@ -1535,6 +1535,19 @@ textarea.field-text__input{
         -ms-flex-pack:end;
             justify-content:flex-end;
     padding:24px; }
+.modal--qrcode .modal-body{
+  display:-webkit-box;
+  display:-ms-flexbox;
+  display:flex;
+  -webkit-box-align:center;
+      -ms-flex-align:center;
+          align-items:center;
+  -webkit-box-pack:center;
+      -ms-flex-pack:center;
+          justify-content:center; }
+.modal--qrcode .modal-body > img{
+    width:300px;
+    height:300px; }
 @-ms-viewport{
   width:device-width; }
 .page{
@@ -1753,8 +1766,14 @@ a[href^="tel:"]{ }
   font-size:14px;
   font-weight:500; }
 .download-link{
-  display:inline-block;
-  vertical-align:baseline;
+  display:-webkit-inline-box;
+  display:-ms-inline-flexbox;
+  display:inline-flex;
+  -ms-flex-wrap:wrap;
+      flex-wrap:wrap;
+  -webkit-box-align:center;
+      -ms-flex-align:center;
+          align-items:center;
   margin:0 0 16px;
   position:relative;
   padding-left:36px;
@@ -1769,7 +1788,7 @@ a[href^="tel:"]{ }
     display:block;
     content:"";
     position:absolute;
-    top:0;
+    top:-3px;
     left:0;
     width:24px;
     height:24px;
@@ -1777,12 +1796,15 @@ a[href^="tel:"]{ }
     background-repeat:no-repeat;
     background-position:center;
     background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg' fill='%23815CD1'%3E %3Cpath d='M20.5 10.19H17.61C15.24 10.19 13.31 8.26 13.31 5.89V3C13.31 2.45 12.86 2 12.31 2H8.07C4.99 2 2.5 4 2.5 7.57V16.43C2.5 20 4.99 22 8.07 22H15.93C19.01 22 21.5 20 21.5 16.43V11.19C21.5 10.64 21.05 10.19 20.5 10.19ZM12.28 15.78L10.28 17.78C10.21 17.85 10.12 17.91 10.03 17.94C9.94 17.98 9.85 18 9.75 18C9.65 18 9.56 17.98 9.47 17.94C9.39 17.91 9.31 17.85 9.25 17.79C9.24 17.78 9.23 17.78 9.23 17.77L7.23 15.77C6.94 15.48 6.94 15 7.23 14.71C7.52 14.42 8 14.42 8.29 14.71L9 15.44V11.25C9 10.84 9.34 10.5 9.75 10.5C10.16 10.5 10.5 10.84 10.5 11.25V15.44L11.22 14.72C11.51 14.43 11.99 14.43 12.28 14.72C12.57 15.01 12.57 15.49 12.28 15.78Z'/%3E %3Cpath d='M17.4297 8.81048C18.3797 8.82048 19.6997 8.82048 20.8297 8.82048C21.3997 8.82048 21.6997 8.15048 21.2997 7.75048C19.8597 6.30048 17.2797 3.69048 15.7997 2.21048C15.3897 1.80048 14.6797 2.08048 14.6797 2.65048V6.14048C14.6797 7.60048 15.9197 8.81048 17.4297 8.81048Z'/%3E %3C/svg%3E"); }
-.download-link span{
+.download-link > span{
+    -webkit-box-flex:1;
+        -ms-flex:1 1 100%;
+            flex:1 1 100%;
     display:block; }
-.download-link span:last-of-type{
-      font-size:14px;
+.download-link > span:last-child{
+      font-size:12px;
       color:#64748B; }
-.download-link span:last-of-type:empty{
+.download-link > span:last-child:empty{
         display:none; }
 .header-block{
   padding:24px 16px;
@@ -3938,17 +3960,16 @@ a{
     display:-webkit-box;
     display:-ms-flexbox;
     display:flex;
-    -ms-flex-wrap:wrap;
-        flex-wrap:wrap; }
+    margin-bottom:24px; }
 .user-account-profile__photo{
     -webkit-box-flex:0;
         -ms-flex:0 0 64px;
             flex:0 0 64px;
-    margin-right:24px;
+    width:64px;
+    height:64px;
+    margin-right:16px;
     border-radius:8px; }
 .user-account-profile__photo img{
-      width:64px;
-      height:64px;
       font-family:"object-fit:contain;object-position:center";
       -o-object-fit:contain;
          object-fit:contain;
@@ -3970,6 +3991,44 @@ a{
             justify-content:space-between; }
 .user-account-profile__name{
     margin-bottom:8px; }
+.user-account-profile__downloads{
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    -ms-flex-wrap:wrap;
+        flex-wrap:wrap;
+    -webkit-box-align:center;
+        -ms-flex-align:center;
+            align-items:center;
+    -webkit-box-pack:justify;
+        -ms-flex-pack:justify;
+            justify-content:space-between; }
+.user-account-profile__downloads > *{
+      margin-bottom:0; }
+.user-account-profile__downloads .btn.btn--text svg{
+      margin-right:0; }
+.user-account-profile__item-wrapper{
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    -ms-flex-wrap:wrap;
+        flex-wrap:wrap;
+    -webkit-box-align:center;
+        -ms-flex-align:center;
+            align-items:center;
+    margin-bottom:16px;
+    font-size:14px;
+    color:#0F172A; }
+.user-account-profile__item-name{
+    -webkit-box-flex:1;
+        -ms-flex:1 1 100%;
+            flex:1 1 100%;
+    margin-bottom:4px; }
+.user-account-profile__item-value{
+    -webkit-box-flex:1;
+        -ms-flex:1 1 100%;
+            flex:1 1 100%;
+    font-weight:500; }
 .user-account-profile__footer{
     display:-webkit-box;
     display:-ms-flexbox;
@@ -4754,7 +4813,31 @@ a{
       padding-right:12px; }
     .calendar{
       position:sticky;
-      top:110px; } }
+      top:110px; }
+      .user-account-profile__item-wrapper{
+        margin-bottom:24px; }
+      .user-account-profile__item-name{
+        -webkit-box-flex:0;
+            -ms-flex:0 0 45%;
+                flex:0 0 45%;
+        margin-bottom:0; }
+      .user-account-profile__item-value{
+        -webkit-box-flex:0;
+            -ms-flex:0 0 55%;
+                flex:0 0 55%;
+        position:relative;
+        padding-left:40px; }
+      .user-account-profile__item-value::before{
+        display:block;
+        content:"";
+        position:absolute;
+        top:50%;
+        left:0;
+        -webkit-transform:translateY(-50%);
+                transform:translateY(-50%);
+        width:15px;
+        height:2px;
+        background-color:currentColor; } }
 @media (min-width: 1366px){
     .breadcrumbs{
       padding-top:44px;
@@ -5374,6 +5457,9 @@ a{
         margin-bottom:16px; }
     .user-account__left-sidebar-col{
       margin-bottom:24px; } }
+@media (max-width: 479px){
+    .download-link__hidden-xs{
+      display:none; } }
 @media (max-width: 1199px){
       .page-footer__header-col{
         margin-bottom:32px; }
@@ -5408,5 +5494,8 @@ a{
         .contacts .table td:last-child,
         .contacts .table th:last-child{
           font-size:14px; } }
+@media (max-width: 991px){
+      .user-account-profile__downloads .btn.btn--text > span{
+        display:none; } }
 
 /*# sourceMappingURL=style.min.css.map */

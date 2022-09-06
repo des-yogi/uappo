@@ -45,7 +45,7 @@
     }
 
     &:focus,
-    &:not([value=""]) {
+    &:not([value=""]):not(.textarea) {
       @include field-focus;
 
       & + #{$block-name}__label > #{$block-name}__label-content {
@@ -59,7 +59,7 @@
       padding-right: 30px;
       background: svg-load('../blocks/text-input/bg-img/asterisk-icon.svg', fill=$main-color);
       background-repeat: no-repeat;
-      background-position: right 12px center;
+      background-position: right 12px top 24px;
       background-size: 7px;
     }
 
@@ -91,11 +91,8 @@
       opacity: 1;
     }
 
-    &--textarea {
-
-      &[required] {
-        background-position: right 12px top 15px;
-      }
+    &.textarea {
+      min-height: 112px;
     }
 
     &--invalid {

@@ -61,7 +61,12 @@
     "user-account-fee": [],
     "user-account-profile": [],
     "user-account-notice": [],
-    "user-account-education": []
+    "user-account-education": [],
+    "join-us-ytb": [],
+    "sign-up-event": [],
+    "event-modal": [],
+    "gallery": [],
+    "user-account-blocked": []
   },
   "addCssBefore": [
     "../../node_modules/bootstrap/scss/_functions",

@@ -5,6 +5,8 @@
   <meta charset="utf-8">
   <title>Сторінка події</title>
   @@include('_include/page_head.html')
+
+  <link href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css" rel="stylesheet"/>
 </head>
 
 <body>
@@ -131,6 +133,8 @@
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut cursus id aliquet convallis diam dictum euismod sed. Diam dignissim tincidunt amet, sapien, tincidunt aliquam elementum arcu. Id odio nunc consectetur pellentesque.</p>
 
 
+                @@include('blocks/gallery/gallery.html')
+
                 @@include('blocks/faq-block/faq-block.html')
 
               </article>
@@ -163,6 +167,7 @@
     "modalName": "Зареєструватись"
   })
 
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
   @@include('_include/page_bottom.html')
 
   <script>

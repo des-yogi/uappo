@@ -1,9 +1,9 @@
-// В этом файле должны быть стили для БЭМ-блока sign-up-event, его элементов, 
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
-// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
-
 .sign-up-event {
 
   $block-name:                &; // #{$block-name}__element
 
+  height: 100%;
+  padding: 16px;
+  background-color: $block-bg;
+  border-radius: $border-radius--xl;
 }

@@ -2,6 +2,15 @@
 
   $block-name:                &; // #{$block-name}__element
 
+  &__heading-col {
+    @include col(xs, 12, $grid-columns, 0);
+    @include col-offset(md, 1);
+    @include col(md, 10);
+    @include col-offset(lg, 0);
+    @include col(lg, 12);
+    margin-bottom: 24px;
+  }
+
   &__calendar-col {
     @include col(xs, 12, $grid-columns, 0);
     @include col-offset(md, 1);

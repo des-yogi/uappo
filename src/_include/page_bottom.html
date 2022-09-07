@@ -1,3 +1,25 @@
-<!-- <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script> -->
 
 <script src="js/script.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+<script>
+  window.cookieconsent.initialise({
+    "palette": {
+      "popup": {
+        "background": "#ffffff",
+        "text": "#0f172a"
+      },
+      "button": {
+        "background": "#ede9fe",
+        "text": "#815cd1"
+      }
+    },
+    "showLink": false,
+    "theme": "classic",
+    "position": "bottom-right",
+    "content": {
+      "message": "Наш сайт використовує файли <b>cookie</b>. Продовжуючи користуватися сайтом, ви погоджуєтесь на використання нами ваших файлів <b>cookie</b>.",
+      "dismiss": "Погоджуюсь"
+    }
+  });
+</script>

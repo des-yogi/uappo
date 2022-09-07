@@ -2,4 +2,69 @@
 @ @include('blocks/gallery/gallery.html')
 -->
 
-<section class="gallery">content</section>
+<section class="gallery">
+  <h2 class="visually-hidden">Галерея</h2>
+  <div class="row">
+
+    <div class="gallery__col">
+      <a data-fancybox="gallery" data-src="img/gallery-img.jpg" data-caption="Заголовок" class="embed-responsive embed-responsive--4-3  gallery__item">
+        <picture>
+          <source srcset="img/gallery-img-thumb.webp" media="(min-width: 1366px)" type="image/webp">
+          <source srcset="img/gallery-img-thumb.jpg" media="(min-width: 1366px)">
+          <!-- 400x300px для десктоп от 1366px -->
+          <source srcset="img/gallery-img-thumb.webp" media="(min-width: 1200px)" type="image/webp">
+          <source srcset="img/gallery-img-thumb.jpg" media="(min-width: 1200px)">
+          <!-- 510x383px для десктоп от 1200px -->
+          <source srcset="img/gallery-img-thumb.webp" type="image/webp">
+          <img src="img/gallery-img-thumb.jpg" width="720" height="540" alt="Alt text">
+        </picture>
+      </a>
+    </div>
+
+    <div class="gallery__col">
+      <a data-fancybox="gallery" data-src="img/gallery-img.jpg" data-caption="Заголовок" class="embed-responsive embed-responsive--4-3  gallery__item">
+        <picture>
+          <source srcset="img/gallery-img-thumb.webp" media="(min-width: 1366px)" type="image/webp">
+          <source srcset="img/gallery-img-thumb.jpg" media="(min-width: 1366px)">
+          <!-- 400x300px для десктоп от 1366px -->
+          <source srcset="img/gallery-img-thumb.webp" media="(min-width: 1200px)" type="image/webp">
+          <source srcset="img/gallery-img-thumb.jpg" media="(min-width: 1200px)">
+          <!-- 510x383px для десктоп от 1200px -->
+          <source srcset="img/gallery-img-thumb.webp" type="image/webp">
+          <img src="img/gallery-img-thumb.jpg" width="720" height="540" alt="Alt text">
+        </picture>
+      </a>
+    </div>
+
+    <div class="gallery__col">
+      <a data-fancybox="gallery" data-src="img/gallery-img.jpg" data-caption="Заголовок" class="embed-responsive embed-responsive--4-3  gallery__item">
+        <picture>
+          <source srcset="img/gallery-img-thumb.webp" media="(min-width: 1366px)" type="image/webp">
+          <source srcset="img/gallery-img-thumb.jpg" media="(min-width: 1366px)">
+          <!-- 400x300px для десктоп от 1366px -->
+          <source srcset="img/gallery-img-thumb.webp" media="(min-width: 1200px)" type="image/webp">
+          <source srcset="img/gallery-img-thumb.jpg" media="(min-width: 1200px)">
+          <!-- 510x383px для десктоп от 1200px -->
+          <source srcset="img/gallery-img-thumb.webp" type="image/webp">
+          <img src="img/gallery-img-thumb.jpg" width="720" height="540" alt="Alt text">
+        </picture>
+      </a>
+    </div>
+
+    <div class="gallery__col">
+      <a data-fancybox="gallery" data-src="img/gallery-img.jpg" data-caption="Заголовок" class="embed-responsive embed-responsive--4-3  gallery__item">
+        <picture>
+          <source srcset="img/gallery-img-thumb.webp" media="(min-width: 1366px)" type="image/webp">
+          <source srcset="img/gallery-img-thumb.jpg" media="(min-width: 1366px)">
+          <!-- 400x300px для десктоп от 1366px -->
+          <source srcset="img/gallery-img-thumb.webp" media="(min-width: 1200px)" type="image/webp">
+          <source srcset="img/gallery-img-thumb.jpg" media="(min-width: 1200px)">
+          <!-- 510x383px для десктоп от 1200px -->
+          <source srcset="img/gallery-img-thumb.webp" type="image/webp">
+          <img src="img/gallery-img-thumb.jpg" width="720" height="540" alt="Alt text">
+        </picture>
+      </a>
+    </div>
+
+  </div>
+</section>

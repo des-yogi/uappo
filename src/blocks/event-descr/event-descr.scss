@@ -1,6 +1,6 @@
 .event-descr {
 
-  $block-name:                &; // #{$block-name}__element
+  $block-name:                &; // #{$block-name                }__element
 
   &__col {
     @include col(xs, 12, $grid-columns, 0);
@@ -44,6 +44,10 @@
           flex: 1 1 100%;
         }
       }
+    }
+
+    &--noflex {
+      display: block;
     }
   }
 }

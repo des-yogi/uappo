@@ -7,7 +7,7 @@
   }
 
   .modal-header {
-    padding: 48px 16px 0;
+    padding: 48px 16px 24px;
 
     @media (min-width: $screen-md) {
       padding-left: 48px;
@@ -16,7 +16,7 @@
   }
 
   .modal-body {
-    padding: 24px 16px 48px;
+    padding: 0 16px 48px;
 
     @media (min-width: $screen-md) {
       padding-left: 48px;
@@ -24,6 +24,17 @@
     }
   }
 
+  .modal-footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 16px 48px;
+
+    @media (min-width: $screen-md) {
+      padding-left: 48px;
+      padding-right: 48px;
+    }
+  }
 
   .modal-fullscreen {
     max-width: none !important;

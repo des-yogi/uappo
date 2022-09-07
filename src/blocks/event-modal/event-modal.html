@@ -1,14 +1,261 @@
 <!--DEV
-
-Для использования этого файла как шаблона:
-
 @ @include('blocks/event-modal/event-modal.html')
-
-(Нужно убрать пробел между символами @)
-Подробнее: https://www.npmjs.com/package/gulp-file-include
-
-
-
-<div class="event-modal">content</div>
-
 -->
+
+
+<!-- Event Modal -->
+<div class="modal event-modal fade" id="eventModal" tabindex="-1" aria-labelledby="eventModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="h4  modal-title" id="eventModalLabel">Записатися на подію</h5>
+        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close"><span></span></button>
+      </div>
+      <div class="modal-body">
+        <form class="form  event-modal__form" action="" method="post">
+
+          @@include('../../blocks/text-input/text-input.html', {
+            "id": "eventId-1",
+            "addClass": "",
+            "type": "text",
+            "name": "surname",
+            "label": "Прізвище",
+            "ifRequired": "required",
+            "errorText": "",
+            "tipText": ""
+          })
+
+          @@include('../../blocks/text-input/text-input.html', {
+            "id": "eventId-2",
+            "addClass": "text-input__field--invalid",
+            "type": "text",
+            "name": "name",
+            "label": "Ім’я",
+            "ifRequired": "required",
+            "errorText": "Ошибка",
+            "tipText": ""
+          })
+
+          @@include('../../blocks/text-input/text-input.html', {
+            "id": "eventId-3",
+            "addClass": "",
+            "type": "text",
+            "name": "patronymic",
+            "label": "По-батькові",
+            "ifRequired": "required",
+            "errorText": "",
+            "tipText": ""
+          })
+
+          @@include('../../blocks/text-input/text-input.html', {
+            "id": "eventId-4",
+            "addClass": "",
+            "type": "tel",
+            "name": "tel",
+            "label": "Номер телефона",
+            "ifRequired": "required",
+            "errorText": "",
+            "tipText": ""
+          })
+
+          @@include('../../blocks/text-input/text-input.html', {
+            "id": "eventId-5",
+            "addClass": "",
+            "type": "text",
+            "name": "tg-name",
+            "label": "Telegram ім’я",
+            "ifRequired": "required",
+            "errorText": "",
+            "tipText": ""
+          })
+
+          @@include('../../blocks/text-input/text-input.html', {
+            "id": "eventId-6",
+            "addClass": "",
+            "type": "email",
+            "name": "email",
+            "label": "Email",
+            "ifRequired": "required",
+            "errorText": "",
+            "tipText": ""
+          })
+
+          @@include('../../blocks/text-input/text-input.html', {
+            "id": "eventId-7",
+            "addClass": "",
+            "type": "text",
+            "name": "organization",
+            "label": "Організація",
+            "ifRequired": "required",
+            "errorText": "",
+            "tipText": ""
+          })
+
+          @@include('../../blocks/text-input/text-input.html', {
+            "id": "eventId-8",
+            "addClass": "",
+            "type": "text",
+            "name": "position",
+            "label": "Посада",
+            "ifRequired": "required",
+            "errorText": "",
+            "tipText": "Повна назва Вашої посади"
+          })
+
+          <div class="text-input">
+            <div class="text-input__wrapper">
+              <textarea id="eventId-9" class="text-input__field textarea" name="message" onblur="this.setAttribute('value', this.value);" required></textarea>
+              <label class="text-input__label" for="eventId-9">
+                <span class="text-input__label-content">Ваша мотивація взяти участь у заході (пару речень)</span>
+              </label>
+            </div>
+            <span class="text-input__error"></span>
+          </div>
+
+          @@include('../../blocks/text-input/text-input.html', {
+            "id": "eventId-10",
+            "addClass": "",
+            "type": "text",
+            "name": "residence",
+            "label": "Місто проживання",
+            "ifRequired": "required",
+            "errorText": "",
+            "tipText": ""
+          })
+
+          <div class="field-radio">
+            <div class="field-radio__title">Потрібен трансфер</div>
+            <div class="field-radio__group">
+              <div class="field-radio__input-wrap">
+                <label class="field-radio__name">
+                  <input class="field-radio__input" type="radio" name="transfer" value="yes">
+                  <span class="field-radio__name-text">Так</span>
+                </label>
+              </div>
+              <div class="field-radio__input-wrap">
+                <label class="field-radio__name">
+                  <input class="field-radio__input" type="radio" name="transfer" value="no" checked>
+                  <span class="field-radio__name-text">Ні</span>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="field-radio">
+            <div class="field-radio__title">Потрібне проживання</div>
+            <div class="field-radio__group">
+              <div class="field-radio__input-wrap">
+                <label class="field-radio__name">
+                  <input class="field-radio__input" type="radio" name="accommodation" value="yes">
+                  <span class="field-radio__name-text">Так</span>
+                </label>
+              </div>
+              <div class="field-radio__input-wrap">
+                <label class="field-radio__name">
+                  <input class="field-radio__input" type="radio" name="accommodation" value="no" checked>
+                  <span class="field-radio__name-text">Ні</span>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="field-radio">
+            <div class="field-radio__title">Потрібне харчування</div>
+            <div class="field-radio__group">
+              <div class="field-radio__input-wrap">
+                <label class="field-radio__name">
+                  <input class="field-radio__input" type="radio" name="subsistence" value="yes">
+                  <span class="field-radio__name-text">Так</span>
+                </label>
+              </div>
+              <div class="field-radio__input-wrap">
+                <label class="field-radio__name">
+                  <input class="field-radio__input" type="radio" name="subsistence" value="no" checked>
+                  <span class="field-radio__name-text">Ні</span>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="field-radio">
+            <div class="field-radio__title">Потрібен офіційний лист</div>
+            <div class="field-radio__group">
+              <div class="field-radio__input-wrap">
+                <label class="field-radio__name">
+                  <input class="field-radio__input" type="radio" name="invitation" value="yes">
+                  <span class="field-radio__name-text">Так</span>
+                </label>
+              </div>
+              <div class="field-radio__input-wrap">
+                <label class="field-radio__name">
+                  <input class="field-radio__input" type="radio" name="invitation" value="no" checked>
+                  <span class="field-radio__name-text">Ні</span>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="collapse  event-modal__hidden-fields" id="collapsedBlock">
+
+            @@include('../../blocks/text-input/text-input.html', {
+              "id": "eventId-15",
+              "addClass": "",
+              "type": "text",
+              "name": "official-full-name",
+              "label": "ПІБ посадової особи",
+              "ifRequired": "required",
+              "errorText": "",
+              "tipText": ""
+            })
+
+            @@include('../../blocks/text-input/text-input.html', {
+              "id": "eventId-16",
+              "addClass": "",
+              "type": "text",
+              "name": "official-email",
+              "label": "Email посадової особи",
+              "ifRequired": "required",
+              "errorText": "",
+              "tipText": ""
+            })
+
+            @@include('../../blocks/text-input/text-input.html', {
+              "id": "eventId-17",
+              "addClass": "",
+              "type": "text",
+              "name": "postal-code",
+              "label": "Індекс",
+              "ifRequired": "required",
+              "errorText": "",
+              "tipText": ""
+            })
+
+            @@include('../../blocks/text-input/text-input.html', {
+              "id": "eventId-18",
+              "addClass": "",
+              "type": "text",
+              "name": "official-address",
+              "label": "Адреса",
+              "ifRequired": "required",
+              "errorText": "",
+              "tipText": ""
+            })
+
+          </div>
+
+          <div class="field-checkbox form-reg__agreement" style="margin-bottom:0;">
+            <label class="field-checkbox__name">
+              <input class="field-checkbox__input" type="checkbox" name="agreement" checked>
+              <span class="field-checkbox__name-text">Даю згоду на обробку персоналних данних</span>
+            </label>
+
+            <div class="field-actions">
+              <button class="btn" type="submit">Відправити</button>
+            </div>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

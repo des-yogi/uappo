@@ -115,8 +115,11 @@
     display: inline-block;
     position: absolute;
     top: 16px;
+    right: 30px;
     left: 16px;
-    z-index: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
     //padding: 0 8px;
     //transform: translateY(-50%);
 

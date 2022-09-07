@@ -5,6 +5,8 @@
   <meta charset="utf-8">
   <title>Кабінет користувача</title>
   @@include('_include/page_head.html')
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.css" integrity="sha512-0SPWAwpC/17yYyZ/4HSllgaK7/gg9OlVozq8K7rf3J8LvCjYEEIfzzpnA2/SSjpGIunCSD18r3UhvDcu/xncWA==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
 </head>
 
 <body>
@@ -69,6 +71,8 @@
             <div class="user-account__left-sidebar-col">
 
               <div class="user-account__left-sidebar">
+
+                @@include('blocks/user-account-blocked/user-account-blocked.html')
 
                 <section class="user-account-nav">
                   <ul class="nav user-account-nav__list" id="accountTab" role="tablist" aria-orientation="vertical">
@@ -154,6 +158,31 @@
       </div>
     </div>
   </div>
+
+  <!-- Crop Modal -->
+  <div class="modal fade" id="cropModal" tabindex="-1" aria-labelledby="cropModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="cropModalLabel">Обрізати фото</h5>
+          <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close"><span></span></button>
+        </div>
+        <div class="modal-body">
+          <div class="img-container">
+            <img id="image" src="https://avatars0.githubusercontent.com/u/3456749">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn--danger" data-bs-dismiss="modal">
+            <span>Закрити</span>
+          </button>
+          <button id="crop" type="button" class="btn">Обрізати</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.js" integrity="sha512-ooSWpxJsiXe6t4+PPjCgYmVfr1NS5QXJACcR/FPpsdm6kqG1FmQ2SVyg2RXeVuCRBLr0lWHnWJP6Zs1Efvxzww==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
   @@include('_include/page_bottom.html')
 

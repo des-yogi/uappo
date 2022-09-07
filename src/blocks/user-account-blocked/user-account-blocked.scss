@@ -1,9 +1,17 @@
-// В этом файле должны быть стили для БЭМ-блока user-account-blocked, его элементов, 
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
-// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
-
 .user-account-blocked {
 
   $block-name:                &; // #{$block-name}__element
 
+  padding: 24px 16px;
+  background-color: $white;
+  border-radius: $border-radius--xl;
+  background-color: $color-warning;
+
+  @media (min-width: $screen-md) {
+    padding: 24px;
+  }
+
+  &__title {
+    color: $color-danger;
+  }
 }

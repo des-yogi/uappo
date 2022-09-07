@@ -1,0 +1,51 @@
+.join-us-ytb {
+
+  $block-name:                &; // #{$block-name}__element
+
+
+  height: 100%;
+  padding: 24px;
+  background-color: $white;
+  border-radius: $border-radius--xl;
+
+  @media (min-width: $screen-md) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    //padding: 24px;
+  }
+
+  &__title {
+    margin-bottom: 8px;
+  }
+
+  &__text {
+    margin-bottom: 20px;
+
+    p {
+
+      &:first-of-type {
+        margin-top: 0;
+      }
+
+      &:empty {
+        display: none;
+      }
+    }
+  }
+
+  &__link-wrapper {
+    display: flex;
+    align-item: center;
+  }
+
+  &__icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 16px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 40px;
+    background-image: svg-load('../blocks/join-us-ytb/bg-img/ytb-icon-big-color.svg');
+  }
+}

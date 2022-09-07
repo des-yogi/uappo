@@ -10,9 +10,12 @@
   <form id="userProfile" action="" method="post">
 
     <div class="user-account-profile__header">
-      <div class="embed-responsive embed-responsive--1-1  user-account-profile__photo">
-        <img src="img/profile-photo.jpg" width="152" height="152" alt="User name">
-      </div>
+      <label id="avatarLabel" class="label  user-account-profile__label" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Завантажити (змінити) фото">
+        <div class="user-account-profile__photo">
+          <img id="avatar" src="img/profile-photo.jpg" width="152" height="152" alt="User name">
+          <input type="file" class="visually-hidden" id="input" name="image" accept="image/*">
+        </div>
+      </label>
       <div class="user-account-profile__descr">
         <h3 class="h4  user-account-profile__name">Катерина Павліченко</h3>
         <div class="user-account-profile__downloads">

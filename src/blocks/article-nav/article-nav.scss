@@ -56,6 +56,17 @@
     @media (min-width: $screen-md) {
       padding: 32px;
     }
+
+    & > img {
+      display: inline-block;
+      vertical-align: top;
+      margin: 16px 0;
+      border-radius: $border-radius--xl;
+
+      @media (min-width: $screen-sm) {
+        max-width: 400px;
+      }
+    }
   }
 
   &__block {
@@ -94,15 +105,7 @@
       }
     }
 
-    #{$block-name}__main {
-
-      img {
-        display: inline-block;
-        vertical-align: top;
-        max-width: 400px;
-        margin: 16px 0;
-        border-radius: $border-radius--xl;
-      }
-    }
+    // #{$block-name}__main {
+    // }
   }
 }

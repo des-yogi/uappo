@@ -61,7 +61,12 @@
     "user-account-fee": [],
     "user-account-profile": [],
     "user-account-notice": [],
-    "user-account-education": []
+    "user-account-education": [],
+    "join-us-ytb": [],
+    "sign-up-event": [],
+    "event-modal": [],
+    "gallery": [],
+    "user-account-blocked": []
   },
   "addCssBefore": [
     "../../node_modules/bootstrap/scss/_functions",
@@ -73,6 +78,7 @@
     "../../node_modules/bootstrap/scss/_nav",
     "../../node_modules/bootstrap/scss/_accordion",
     "../../node_modules/bootstrap/scss/_modal",
+    "../../node_modules/bootstrap/scss/_tooltip",
     "../../node_modules/flickity/dist/flickity.min.css"
   ],
   "addCssAfter": [
@@ -80,7 +86,7 @@
   ],
   "singleCompiled": [],
   "addJsBefore": [
-    "./node_modules/@popperjs/core/dist/umd/popper-base.min.js",
+    "./node_modules/@popperjs/core/dist/umd/popper.min.js",
     "./node_modules/bootstrap/dist/js/bootstrap.min.js",
     "./node_modules/focus-visible/dist/focus-visible.min.js",
     "./node_modules/blazy/blazy.min.js",

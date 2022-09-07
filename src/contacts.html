@@ -69,6 +69,16 @@
                     "tipText": ""
                   })
 
+                  <div class="text-input">
+                    <div class="text-input__wrapper">
+                      <textarea id="textareaId" class="text-input__field  textarea" name="message" onblur="this.setAttribute('value', this.value);" required></textarea>
+                      <label class="text-input__label" for="textareaId">
+                        <span class="text-input__label-content">Текст повідомлення</span>
+                      </label>
+                    </div>
+                    <span class="text-input__error"></span>
+                  </div>
+
                   <div class="field-checkbox form-reg__agreement">
                     <label class="field-checkbox__name">
                       <input class="field-checkbox__input" type="checkbox" name="agreement" checked>
@@ -136,6 +146,14 @@
                       </td>
                       <td>
                         <a href="https://t.me/uappo">@uappo</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="snd-cloud">
+                        <span class="contacts__caption  contacts__caption--tg">SoundCloud</span>
+                      </td>
+                      <td>
+                        <a href="https://soundcloud.com/channel">uappo</a>
                       </td>
                     </tr>
                   </tbody>

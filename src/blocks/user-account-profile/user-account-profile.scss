@@ -14,14 +14,20 @@
     display: flex;
     //flex-wrap: wrap;
     margin-bottom: 24px;
+
+    .btn.btn--text {
+      padding-bottom: 0;
+    }
   }
 
   &__photo {
     flex: 0 0 64px;
     width: 64px;
     height: 64px;
-    margin-right: 16px;
     border-radius: $border-radius;
+    background-color: $body-bg;
+    overflow: hidden;
+    transition: background-color $transition-time;
 
     img {
       object-fit: contain;
@@ -61,7 +67,6 @@
           display: none;
         }
       }
-
     }
   }
 
@@ -127,5 +132,20 @@
   &__exit {
     flex: 0 0 auto;
     margin-left: 24px;
+  }
+
+  &__label {
+    height: auto;
+    margin-right: 16px;
+    cursor: pointer;
+    user-select: none;
+
+    &:hover,
+    &:focus {
+
+      #{$block-name}__photo {
+        background-color: $btn-bg;
+      }
+    }
   }
 }

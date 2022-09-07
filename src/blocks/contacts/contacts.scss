@@ -135,6 +135,13 @@
             background-image: svg-load('../blocks/sprite-svg/svg/telegram.svg', fill=$title-color);
           }
         }
+
+        &.snd-cloud {
+
+          &::before {
+            background-image: svg-load('../blocks/sprite-svg/svg/sound-cloud.svg', fill=$title-color);
+          }
+        }
       }
 
       &:last-child {

@@ -74,7 +74,7 @@
     "yaspeller": "^8.0.0"
   },
   "dependencies": {
-    "@amcharts/amcharts4": "^4.10.27",
+    "@popperjs/core": "^2.11.6",
     "blazy": "^1.8.2",
     "bootstrap": "^5.2.0",
     "flickity": "^3.0.0",

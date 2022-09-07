@@ -15,6 +15,7 @@
 
   Array.prototype.forEach.call(inviteTogglers, function (item) {
     let radio = item;
+    if (!radio) return;
     radio.addEventListener('change', togglerHandler);
   });
 }());

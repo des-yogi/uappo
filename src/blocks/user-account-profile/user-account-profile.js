@@ -10,8 +10,9 @@ document.addEventListener('DOMContentLoaded', function () {
   //var $progressBar = $('.progress-bar');
   //var $alert = $('.alert');
   //var $modal = $('#modal');
-  const modal = new bootstrap.Modal(document.getElementById('cropModal'));
   const modalElem = document.getElementById('cropModal');
+  if (!modalElem) return;
+  const modal = new bootstrap.Modal(modalElem);
 
   let cropper;
 
@@ -150,6 +151,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 (function () {
   const tooltipEl = document.getElementById('avatarLabel');
+  if (!tooltipEl) return;
   const tooltip = new bootstrap.Tooltip(tooltipEl, {
       'container': '.user-account-profile__header'
   });

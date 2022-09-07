@@ -1,4 +1,8 @@
 .event-modal {
 
   $block-name:                &; // #{$block-name}__element
+
+  .btn[type=submit] {
+    width: 100%;
+  }
 }

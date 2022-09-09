@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   document.getElementById('crop').addEventListener('click', function () {
-    let initialAvatarURL;
+    let ava64;
     let canvas;
 
     modal.hide();
@@ -75,75 +75,12 @@ document.addEventListener('DOMContentLoaded', function () {
         width: 160,
         height: 160,
       });
-      initialAvatarURL = avatar.src;
       avatar.src = canvas.toDataURL();
-      //$progress.show();
-      //$alert.removeClass('alert-success alert-warning');
-      canvas.toBlob(function (blob) {
-        let formData = new FormData();
+      ava64 = canvas.toDataURL();
+      avatar.src = ava64; //$progress.show();
+      //add after the main input one more input with this identifier, field type text
+      document.getElementById('ava64').value = ava64;
 
-        formData.append('avatar', blob, 'avatar.jpg');
-
-        const request = new XMLHttpRequest();
-
-        request.open('POST', 'https://jsonplaceholder.typicode.com/photos');
-
-        request.onload = () => {
-          if (request.status !== 200) {
-            // выводим ошибку в консоль
-            console.log(`Ошибка ${request.status}: ${request.statusText}`);
-            return;
-          }
-          // получаем ответ сервера
-          const response = request.response;
-          console.log(response);
-        };
-
-        request.onerror = () => {
-          avatar.src = initialAvatarURL;
-        };
-
-        request.send(formData);
-
-        /*$.ajax('https://jsonplaceholder.typicode.com/posts', {
-          method: 'POST',
-          data: formData,
-          processData: false,
-          contentType: false,
-
-          xhr: function () {
-            var xhr = new XMLHttpRequest();
-
-            xhr.upload.onprogress = function (e) {
-              var percent = '0';
-              var percentage = '0%';
-
-              if (e.lengthComputable) {
-                percent = Math.round((e.loaded / e.total) * 100);
-                percentage = percent + '%';
-                $progressBar.width(percentage).attr('aria-valuenow', percent).text(percentage);
-              }
-            };
-
-            return xhr;
-          },
-
-          success: function () {
-            //$alert.show().addClass('alert-success').text('Upload success');
-          },
-
-          error: function () {
-            avatar.src = initialAvatarURL;
-            //$alert.show().addClass('alert-warning').text('Upload error');
-          },
-
-          complete: function () {
-            //$progress.hide();
-          },
-        });*/
-
-
-      });
     }
   });
 });

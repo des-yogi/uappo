@@ -53,9 +53,9 @@
 
     &:hover,
     &:focus {
-      color: $main-color;
-      background-color: $white;
       text-decoration: none;
+      color: $main-color;
+      background-color: $block-bg;
     }
   }
 }

@@ -1569,9 +1569,9 @@ textarea.field-text__input{
     text-align:center;
     color:inherit; }
 .lang-switcher .dropdown-item:hover, .lang-switcher .dropdown-item:focus{
+      text-decoration:none;
       color:#815CD1;
-      background-color:white;
-      text-decoration:none; }
+      background-color:#F9F8FF; }
 .logo{
   display:block;
   white-space:nowrap;
@@ -2090,6 +2090,42 @@ a[href^="tel:"]{ }
             align-items:center; }
 .page-header__slogan span{
       font-weight:500; }
+.page-header__login .dropdown-menu{
+    min-width:150px; }
+.page-header__login .dropdown-item{
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    -webkit-box-align:center;
+        -ms-flex-align:center;
+            align-items:center;
+    font-size:14px;
+    font-weight:500; }
+.page-header__login .dropdown-item:hover, .page-header__login .dropdown-item:focus{
+      text-decoration:none;
+      color:#815CD1;
+      background-color:#F9F8FF; }
+.page-header__login .dropdown-item svg{
+      width:20px;
+      height:20px;
+      margin-right:12px;
+      fill:currentColor; }
+.page-header__login-icon-wrapper{
+    width:28px;
+    height:28px;
+    border-radius:50%;
+    -webkit-box-shadow:0 0 1px 2px rgba(129, 92, 209, 0.5);
+            box-shadow:0 0 1px 2px rgba(129, 92, 209, 0.5);
+    overflow:hidden; }
+.page-header__login-icon-wrapper img{
+      display:block;
+      width:32px;
+      height:32px;
+      font-family:"object-fit:cover;object-position:center";
+      -o-object-fit:cover;
+         object-fit:cover;
+      -o-object-position:center;
+         object-position:center; }
 .sticky{
   position:sticky;
   will-change:transform; }

@@ -10,13 +10,17 @@
   <form id="userProfile" action="" method="post">
 
     <div class="user-account-profile__header">
-      <label id="avatarLabel" class="label  user-account-profile__label" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Завантажити (змінити) фото">
+      <div class="user-account-profile__photo user-account-profile__photo--start">
+        <img id="avatar" src="img/profile-photo.jpg" width="152" height="152" alt="User name">
+      </div>
+
+      <!-- <label id="avatarLabel" class="label  user-account-profile__label" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Завантажити (змінити) фото">
         <div class="user-account-profile__photo">
           <img id="avatar" src="img/profile-photo.jpg" width="152" height="152" alt="User name">
           <input type="file" class="visually-hidden" id="input" name="image" accept="image/*">
           <input type="text" class="visually-hidden" id="ava64" name="avatar">
         </div>
-      </label>
+      </label> -->
       <div class="user-account-profile__descr">
         <h3 class="h4  user-account-profile__name">Катерина Павліченко</h3>
         <div class="user-account-profile__downloads">

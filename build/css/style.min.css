@@ -4090,6 +4090,8 @@ a{
     overflow:hidden;
     -webkit-transition:background-color 0.25s;
     transition:background-color 0.25s; }
+.user-account-profile__photo--start{
+      margin-right:16px; }
 .user-account-profile__photo img{
       font-family:"object-fit:contain;object-position:center";
       -o-object-fit:contain;

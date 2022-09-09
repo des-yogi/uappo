@@ -29,6 +29,10 @@
     overflow: hidden;
     transition: background-color $transition-time;
 
+    &--start {
+      margin-right: 16px;
+    }
+
     img {
       object-fit: contain;
       object-position: center;

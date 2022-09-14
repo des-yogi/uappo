@@ -39,7 +39,8 @@
             <img src="img/awards.png" width="245" height="126" alt="Text" loading="lazy" decoding="async">
           </div>
           <div class="diag-index__grid-map">
-            <img src="img/map.svg" width="615" height="410" alt="Text" loading="lazy" decoding="async">
+            <div id="map" class="styled-map" style="width:100%;max-width:100%;"></div>
+            <!-- <img src="img/map.svg" width="615" height="410" alt="Text" loading="lazy" decoding="async"> -->
           </div>
         </div>
 
@@ -50,22 +51,23 @@
       <div class="row  diag-index__stat">
 
         <div class="diag-index__stat-card-col  diag-index__stat-card-col--md-full">
-          <section class="diag-index__stat-card">
+          <section id="infoBlock" class="diag-index__stat-card">
             <h4 class="diag-index__stat-card-title">Детальна інформація</h4>
             <div class="diag-index__stat-card-region-wrapper">
               <div>
                 <p class="diag-index__stat-card-region">
-                  <span>Область:</span> Київська область
+                  <span>Область:</span>
+                  <span id="regionName">Київська область</span>
                 </p>
                 <table class="diag-index__table  diag-index__table--sidebar">
                   <tr>
-                    <td>396</td>
+                    <td><span id="woman">396</span></td>
                     <td>
                       <span class="diag-index__icon  diag-index__icon--woman">Жінок</span>
                     </td>
                   </tr>
                   <tr>
-                    <td>31</td>
+                    <td><span id="man">31</span></td>
                     <td>
                       <span class="diag-index__icon  diag-index__icon--man">Чоловіків</span>
                     </td>
@@ -75,8 +77,8 @@
               <div>
                 <p class="diag-index__stat-card-region">
                   <span>Регіональній керівник:</span>
-                  <span>Павліченко Катерина Володимирівна</span>
-                  <a href="tel:+380681111111">+38 068 111 11 11</a>
+                  <span id="leader">Павліченко Катерина Володимирівна</span>
+                  <a id="leaderTel" href="tel:+380681111111">+38 068 111 11 11</a>
                 </p>
               </div>
             </div>

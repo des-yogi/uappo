@@ -2258,8 +2258,7 @@ table th,
   display:block;
   width:100%;
   overflow-x:auto;
-  margin:24px 0;
-  border:1px solid #f5f3ff; }
+  margin:16px 0; }
 .table-mobile-scroll table{
     margin:0;
     border:0 !important;
@@ -2275,7 +2274,6 @@ table th,
 .table-mobile-scroll caption{
     text-align:left;
     padding:0.4em;
-    border-bottom:1px solid #f5f3ff;
     caption-side:top; }
 .tabs{
   margin-top:1.625;
@@ -3833,19 +3831,34 @@ a{
 .contacts__caption{
   display:block;
   position:relative; }
+.contacts .form-reg__agreement{
+  margin-bottom:0; }
+.contacts .table-mobile-scroll{
+  margin-bottom:0; }
 .contacts .table{
   border:none; }
 .contacts .table td,
   .contacts .table th{
-    padding-top:14px;
-    padding-bottom:14px;
+    padding-top:15px;
+    padding-bottom:15px;
     padding-left:32px;
+    font-weight:500;
+    font-size:14px;
     text-align:initial;
+    white-space:nowrap;
     color:#0F172A;
     border:none; }
 .contacts .table td:first-child,
     .contacts .table th:first-child{
-      position:relative; }
+      position:relative;
+      display:-webkit-box;
+      display:-ms-flexbox;
+      display:flex;
+      -webkit-box-align:center;
+          -ms-flex-align:center;
+              align-items:center;
+      min-width:50px;
+      min-height:50px; }
 .contacts .table td:first-child::before,
       .contacts .table th:first-child::before{
         display:block;
@@ -3884,8 +3897,7 @@ a{
         background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 22 22' fill='%230F172A'%3E%3Cpath d='M17.47,1h-11A5.53,5.53,0,0,0,1,6.52v11A5.52,5.52,0,0,0,6.51,23h11A5.53,5.53,0,0,0,23,17.48v-11A5.55,5.55,0,0,0,17.47,1ZM4.22,15A.45.45,0,0,1,4,14.56V12.62a.43.43,0,0,1,.16-.35.54.54,0,0,1,.38-.15.53.53,0,0,1,.39.15.43.43,0,0,1,.16.35v1.94a.56.56,0,0,1-.09.36.56.56,0,0,1-.32.15A.67.67,0,0,1,4.22,15Zm1.65.72a.32.32,0,0,1-.16-.29V10.86a.48.48,0,0,1,.16-.35.61.61,0,0,1,.78,0,.48.48,0,0,1,.16.35V15.4a.32.32,0,0,1-.16.29.81.81,0,0,1-.78,0Zm1.7.21a.32.32,0,0,1-.15-.29V11.47a.46.46,0,0,1,.16-.36A.61.61,0,0,1,8,11a.59.59,0,0,1,.38.14.46.46,0,0,1,.16.36v4.14a.32.32,0,0,1-.15.29A.71.71,0,0,1,8,16,.73.73,0,0,1,7.57,15.9Zm2.11.1c-.37,0-.55-.12-.55-.37V8.92a.63.63,0,0,1,.72-.64c.26.05.38.26.38.64v6.71C10.23,15.88,10.05,16,9.68,16Zm1.19-7.48v7.31a.16.16,0,0,0,0,.09A.13.13,0,0,0,11,16h6.47a2.58,2.58,0,0,0,1.78-.66,2.11,2.11,0,0,0,0-3.21,2.58,2.58,0,0,0-1.78-.66,2.78,2.78,0,0,0-1,.17A3.7,3.7,0,0,0,15.8,9.8a4.26,4.26,0,0,0-1.58-1.32A4.82,4.82,0,0,0,12.09,8a4.92,4.92,0,0,0-1,.11C11,8.15,10.87,8.29,10.87,8.52Z' transform='translate(-1 -1)' fill-rule='evenodd'/%3E%3C/svg%3E"); }
 .contacts .table td:last-child,
     .contacts .table th:last-child{
-      position:relative;
-      font-weight:500; }
+      position:relative; }
 .contacts .table td:last-child::before,
       .contacts .table th:last-child::before{
         display:block;
@@ -3914,12 +3926,21 @@ a{
   max-width:100%;
   padding-left:0;
   padding-right:0; }
-.p-404__img img{
-  display:block;
+.p-404__img{
+  position:relative;
   margin-left:auto;
   margin-right:auto;
-  width:auto;
-  max-width:530px; }
+  width:288px; }
+.p-404__img img{
+    display:block;
+    width:100%; }
+.p-404__img > span{
+    position:absolute;
+    top:5px;
+    right:91.5px;
+    font-size:10px;
+    font-weight:500;
+    color:white; }
 .search-modal__body{
   display:-webkit-box;
   display:-ms-flexbox;
@@ -4939,6 +4960,12 @@ a{
       max-width:66.66667%;
       padding-left:12px;
       padding-right:12px; }
+    .p-404__img{
+      width:530px; }
+      .p-404__img > span{
+        top:11px;
+        right:170px;
+        font-size:17px; }
     .search-modal__body{
       padding:40px; }
     .search-result__inner-col{
@@ -5476,9 +5503,13 @@ a{
       max-width:41.66667%;
       padding-left:12px;
       padding-right:12px; }
-    .p-404__img img{
-      max-width:750px;
+    .p-404__img{
+      width:750px;
       margin-right:0; }
+      .p-404__img > span{
+        top:15px;
+        right:239px;
+        font-size:26px; }
     .search-result__inner-col{
       margin-left:16.66667%; }
     .search-result__inner-col{
@@ -5796,10 +5827,7 @@ a{
 @media (max-width: 411px){
     .contacts__caption{
       font-size:0;
-      color:white; }
-        .contacts .table td:last-child,
-        .contacts .table th:last-child{
-          font-size:14px; } }
+      color:white; } }
 @media (max-width: 991px){
       .user-account-profile__downloads .btn.btn--text > span{
         display:none; } }

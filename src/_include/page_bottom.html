@@ -1,3 +1,239 @@
+<!-- для главной -->
+<script src="https://www.amcharts.com/lib/3/ammap.js"></script>
+<script src="https://www.amcharts.com/lib/3/maps/js/ukraineLow.js"></script>
+<!-- для главной -->
+
+ <!-- amCharts javascript code -->
+ <script type="text/javascript">
+  AmCharts.makeChart("map",{
+    "type": "map",
+    "pathToImages": "http://www.amcharts.com/lib/3/images/",
+    "addClassNames": true,
+    "fontSize": 14,
+    "color": "#ccc",
+    "projection": "mercator",
+    "backgroundAlpha": 1,
+    "backgroundColor": "rgba(255,255,255,1)",
+    "dataProvider": {
+      "map": "ukraineLow",
+      "getAreasFromMap": true,
+      "areas": [
+        {
+          "id": "UA-32",
+          "title": "Київьска область",
+          "color": "rgba(129,92,209, 0.9)",
+          "man":"13",
+          "woman":"245",
+          "leader":"Павліченко Катерина Володимирівна",
+          "leaderTel":"+38 050 111 22 33"
+        },
+        {
+          "id": "UA-43",
+          "title": "АР Крим",
+          "color": "rgba(129,92,209, 0.1)"
+        },
+        {
+          "id": "UA-71",
+          "title": "Черкаська область",
+          "color": "rgba(129,92,209, 0.2)",
+          "man":"6",
+          "woman":"92",
+          "leader":"Сідоренко Валентина Михайлівна",
+          "leaderTel":"+38 093 532 78 13"
+        },
+        {
+          "id": "UA-74",
+          "title": "Чернігівська",
+          "color": "rgba(129,92,209, 0.3)"
+        },
+        {
+          "id": "UA-77",
+          "title": "Чернівецька",
+          "color": "rgba(129,92,209, 0.4)"
+        },
+        {
+          "id": "UA-12",
+          "title": "Дніпропетровська",
+          "color": "rgba(129,92,209, 0.6)"
+        },
+        {
+          "id": "UA-14",
+          "title": "Донецька",
+          "color": "rgba(129,92,209, 0.1)"
+        },
+        {
+          "id": "UA-26",
+          "title": "Івано-Франківська",
+          "color": "rgba(129,92,209, 0.8)"
+        },
+        {
+          "id": "UA-63",
+          "title": "Харківська",
+          "color": "rgba(129,92,209, 0.7)"
+        },
+        {
+          "id": "UA-65",
+          "title": "Херсонська",
+          "color": "rgba(129,92,209, 0.6)"
+        },
+        {
+          "id": "UA-68",
+          "title": "Хмельницька",
+          "color": "rgba(129,92,209, 0.5)"
+        },
+        {
+          "id": "UA-30",
+          "title": "Київ",
+          "color": "rgba(129,92,209, 1)"
+        },
+        {
+          "id": "UA-35",
+          "title": "Кіровоградська",
+          "color": "rgba(129,92,209, 0.5)"
+        },
+        {
+          "id": "UA-09",
+          "title": "Луганська",
+          "color": "rgba(129,92,209, 0.3)"
+        },
+        {
+          "id": "UA-46",
+          "title": "Львівська",
+          "color": "rgba(129,92,209, 0.2)"
+        },
+        {
+          "id": "UA-48",
+          "title": "Миколаївськаv",
+          "color": "rgba(129,92,209, 0.7)"
+        },
+        {
+          "id": "UA-51",
+          "title": "Одеська",
+          "color": "rgba(129,92,209, 0.4)"
+        },
+        {
+          "id": "UA-53",
+          "title": "Полтавська",
+          "color": "rgba(129,92,209, 0.1)"
+        },
+        {
+          "id": "UA-56",
+          "title": "Рівненська",
+          "color": "rgba(129,92,209, 0.2)"
+        },
+        {
+          "id": "UA-59",
+          "title": "Сумська",
+          "color": "rgba(129,92,209, 0.3)"
+        },
+        {
+          "id": "UA-61",
+          "title": "Тернопільська'",
+          "color": "rgba(129,92,209, 0.2)"
+        },
+        {
+          "id": "UA-21",
+          "title": "Закарпатська",
+          "color": "rgba(129,92,209, 0.3)"
+        },
+        {
+          "id": "UA-05",
+          "title": "Вінницька",
+          "color": "rgba(129,92,209, 0.4)"
+        },
+        {
+          "id": "UA-07",
+          "title": "Волинська",
+          "color": "rgba(129,92,209, 0.3)"
+        },
+        {
+          "id": "UA-23",
+          "title": "Запорізька",
+          "color": "rgba(129,92,209, 0.5)"
+        },
+        {
+          "id": "UA-18",
+          "title": "Житомирська",
+          "color": "rgba(129,92,209, 0.4)"
+        }
+      ]
+    },
+    "balloon": {
+      "horizontalPadding": 15,
+      "borderAlpha": 0,
+      "borderThickness": 1,
+      "verticalPadding": 15
+    },
+    "areasSettings": {
+      "color": "rgba(129,92,209, 0.1)", // дефолтный цвет карты
+      "outlineColor": "rgba(255,255,255, 1)",
+      "rollOverOutlineColor": "rgba(255,255,255, 1)",
+      "rollOverBrightness": 20,
+      "selectedBrightness": 20,
+      "selectable": true,
+      "unlistedAreasAlpha": 0,
+      "unlistedAreasOutlineAlpha": 0
+    },
+    "imagesSettings": {
+      "alpha": 1,
+      "color": "rgba(129,129,129,1)",
+      "outlineAlpha": 0,
+      "rollOverOutlineAlpha": 0,
+      "outlineColor": "rgba(80,80,80,1)",
+      "rollOverBrightness": 20,
+      "selectedBrightness": 20,
+      "selectable": true
+    },
+    "linesSettings": {
+      "color": "rgba(129,129,129,1)",
+      "selectable": true,
+      "rollOverBrightness": 20,
+      "selectedBrightness": 20
+    },
+    "zoomControl": {
+      "zoomControlEnabled": true,
+      "homeButtonEnabled": false,
+      "panControlEnabled": false,
+      "right": 38,
+      "bottom": 30,
+      "minZoomLevel": 0.25,
+      "gridHeight": 100,
+      "gridAlpha": 0.3,
+      "gridBackgroundAlpha": 0,
+      "gridColor": "#815cd1",
+      "draggerAlpha": 1,
+      "buttonCornerRadius": 2
+    },
+    "listeners": [{
+      "event": "clickMapObject",
+      "method": (event) => {
+        const infoBlock = document.getElementById('infoBlock');
+        if (!infoBlock) return;
+        const regionName = document.getElementById('regionName');
+        const woman = document.getElementById('woman');
+        const man = document.getElementById('man');
+        const leader = document.getElementById('leader');
+        const leaderTel = document.getElementById('leaderTel');
+        const setData = function () {
+          regionName.textContent = event.mapObject.title;
+          woman.textContent = event.mapObject.woman;
+          man.textContent = event.mapObject.man;
+          leader.textContent = event.mapObject.leader;
+          leaderTel.textContent = event.mapObject.leaderTel;
+          if (event.mapObject.leaderTel) {
+            let telString = event.mapObject.leaderTel.split(' ').join('');
+            leaderTel.href = `tel:${telString}`;
+          } else {
+            leaderTel.removeAttribute('href');
+          }
+        };
+        setData();
+
+        //console.log('id',event.mapObject.id,'title',event.mapObject.title,'man',event.mapObject.man ,'woman',event.mapObject.woman ,'tel',event.mapObject.tel,'count',event.mapObject.count);
+      }
+    }]
+  });
+</script>
 
 <script src="js/script.min.js"></script>
 

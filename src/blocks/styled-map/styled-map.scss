@@ -1,0 +1,33 @@
+.styled-map {
+
+  $block-name:                &; // #{$block-name}__element
+
+  min-height: 250px;
+
+  @media (min-width: $screen-md) {
+    height: 320px;
+  }
+
+  @media (min-width: $screen-lg) {
+    height: 380px;
+  }
+
+  @media (min-width: $screen-lg) {
+    height: 410px;
+  }
+
+  svg {
+    width: 100% !important;
+    height: 100% !important;
+
+    .amcharts-map-image {
+      visibility: hidden;
+    }
+  }
+
+  a {
+    visibility: hidden;
+  }
+}
+
+//height:410px;

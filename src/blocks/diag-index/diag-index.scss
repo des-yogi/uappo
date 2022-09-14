@@ -198,6 +198,7 @@
   }
 
   &__grid-map {
+    overflow: hidden;
 
     @media (min-width: $screen-md) {
       grid-area: 2 / 2 / 3 / 3;

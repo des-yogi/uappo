@@ -2,6 +2,7 @@
 Українська асоціація представниць правоохоронних органів
 
 * https://des-yogi.github.io/uappo/
+* https://des-yogi.github.io/uappo/about-us.html
 * https://des-yogi.github.io/uappo/join-us.html
 * https://des-yogi.github.io/uappo/annual-report.html
 * https://des-yogi.github.io/uappo/events.html

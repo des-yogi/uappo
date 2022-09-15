@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="uk" prefix="og: https://ogp.me/ns#">
+
+<head>
+  <meta charset="utf-8">
+  <title>Про нас</title>
+  @@include('_include/page_head.html')
+</head>
+
+<body>
+<noscript>У вас отключен JavaScript. Приносим наши извинения, но это делает затруднительным использование данного сайта.</noscript>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+      @@include('blocks/page-header/page-header.html')
+
+      @@include('blocks/breadcrumbs/breadcrumbs.html', {
+        "addClass": " breadcrumbs__col--narrow"
+      })
+
+      <main class="main">
+
+        <article class="container  article-nav">
+          <h1 class="visually-hidden">Історія виникнення Асоціації</h1>
+
+          <div class="row">
+
+            <div class="article-nav__aside-col">
+              <div class="article-nav__aside">
+                <ol class="article-nav__nav">
+                  <li class="article-nav__nav-item">
+                    <a href="#loc1" class="scroll-link" data-scroll-link>Як усе починалось?</a>
+                  </li>
+                  <li class="article-nav__nav-item">
+                    <a href="#loc2" class="scroll-link" data-scroll-link>Правління</a>
+                  </li>
+                  <li class="article-nav__nav-item">
+                    <a href="#loc3" class="scroll-link" data-scroll-link>Наша історія у таймлайні</a>
+                  </li>
+                </ol>
+              </div>
+            </div>
+
+            <div class="article-nav__main-col">
+              <div class="article-nav__main">
+
+                <section id="loc1" class="article-nav__block">
+                  <h2 class="h1">Як усе починалось?</h2>
+                  <p>Ідея створення подібного осередку вперше з’явилась у 2015 році, на етапі реформування правоохоронних органів в Україні. Проте активна її реалізація розпочалась у березні 2017 року після заходів на тему ґендерних аспектів та діяльності поліції, які організував Проєкт підтримки підготовки поліцейських (PTAP).</p><p>Далі було сформовано робочу групу з 15 осіб, учасниці якої стали першопрохідцями у питанні реалізації цієї ідеї. Вони консультувалися з міжнародними експертами, мали зустріч із міністеркою закордонних справ Канади Христею Фріланд, а також взяли участь у 7-й щорічній конференції «Жінки в поліції» у Грузії.</p>
+                  <p>А березень 2018 став офіційним початком успішного функціонування УАППО, адже відбулась реєстрація громадської організації.</p>
+                  <p>До слова, прототипом УАППО є Міжнародна асоціація жінок-поліцейських, заснована в 1915 році в Лос-Анджелесі задля об’єднання та підвищення потенціалу жінок у поліції. Саме вона є взірцем успішної консолідації зусиль правоохоронниць. Тому, коли у вересні 2019 року УАППО здобула статус афілійованого члена МАЖП, це посилило роль українських правоохоронців на міжнародній арені.</p>
+                  <p>Долучена до роботи на міжнародному рівні Українська асоціація представниць правоохоронних органів за цей час стала провідником кращих позитивних змін, базуючись на національному та закордонному досвіді.</p>
+                </section>
+
+                <section id="loc2" class="article-nav__block">
+                  <h2>Правління</h2>
+
+                  @@include('blocks/leaders-slider/leaders-slider.html')
+                </section>
+
+                <section id="loc3" class="article-nav__block">
+                  <h2>Наша історія у таймлайні</h2>
+
+                  @@include('blocks/timeline/timeline.html')
+                </section>
+
+              </div>
+            </div>
+
+          </div>
+        </article>
+
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+      @@include('blocks/page-footer/page-footer.html')
+    </div>
+
+  </div>
+
+  @@include('blocks/search-modal/search-modal.html')
+
+  @@include('blocks/login-modal/login-modal.html', {
+    "addClass": "",
+    "addId": "login",
+    "modalName": "Вхід"
+  })
+
+  @@include('blocks/login-modal/login-modal.html', {
+    "addClass": "login-modal--register",
+    "addId": "register",
+    "modalName": "Зареєструватись"
+  })
+
+  @@include('_include/page_bottom.html')
+
+</body>
+</html>

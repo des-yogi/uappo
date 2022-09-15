@@ -1,0 +1,77 @@
+.timeline {
+
+  $block-name:                &; // #{$block-name}__element
+
+  li {
+    margin: 0;
+  }
+
+  &__year {
+    padding-left: 32px;
+
+    &:last-child {
+
+      #{$block-name}__month {
+
+        &:last-child {
+          padding-bottom: 0;
+        }
+      }
+    }
+  }
+
+  &__year-title {
+    padding: 16px;
+    margin-bottom: 48px;
+    background-color: $block-bg;
+    border-radius: $border-radius--lg;
+  }
+
+  &__month {
+    position: relative;
+    padding-bottom: 48px;
+
+    &::before {
+      display: block !important;
+      content: "";
+      position: absolute;
+      top: 5px;
+      bottom: -15px;
+      left: -27px;
+      width: 2px;
+      background: repeating-linear-gradient(to bottom, $main-color, $main-color 16px, $white 16px, $white 28px);
+    }
+
+    &:last-child {
+
+      &::before {
+        display: none !important;
+      }
+    }
+
+    p {
+
+      &:first-of-type {
+        margin-top: 0;
+      }
+    }
+  }
+
+  &__month-title {
+    position: relative;
+    margin-bottom: 12px;
+
+    &::after {
+      display: block;
+      content: "";
+      position: absolute;
+      top: 4px;
+      left: -33px;
+      width: 14px;
+      height: 14px;
+      background-color: $white;
+      border: 2px solid $main-color;
+      border-radius: 50%;
+    }
+  }
+}

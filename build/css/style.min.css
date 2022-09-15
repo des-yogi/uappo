@@ -3028,14 +3028,16 @@ a{
     color:#815CD1; }
 .project-card__media-item + .project-card__media-item{
       margin-left:16px; }
+.project-card__link{
+    margin-left:auto; }
 .project-card__link::after{
-    display:block;
-    content:"";
-    position:absolute;
-    top:0;
-    right:0;
-    bottom:0;
-    left:0; }
+      display:block;
+      content:"";
+      position:absolute;
+      top:0;
+      right:0;
+      bottom:0;
+      left:0; }
 .project-card__link-wrapper .btn,
   .project-card__link-wrapper a{
     width:100%; }

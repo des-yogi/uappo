@@ -1,0 +1,23 @@
+.alert-success {
+
+  $block-name:                &; // #{$block-name}__element
+
+  padding: 24px;
+  margin: 16px 0;
+  background-color: $color-success-bg;
+  border-radius: $border-radius--xl;
+
+  &__title {
+    margin-bottom: 12px;
+    color: $color-success;
+  }
+
+  &__text {
+    font-size: 14px;
+    color: $title-color;
+
+    &:first-of-type {
+      margin-top: 0;
+    }
+  }
+}

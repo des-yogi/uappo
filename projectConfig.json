@@ -67,7 +67,10 @@
     "event-modal": [],
     "gallery": [],
     "user-account-blocked": [],
-    "styled-map": []
+    "styled-map": [],
+    "leaders-slider": [],
+    "timeline": [],
+    "alert-success": []
   },
   "addCssBefore": [
     "../../node_modules/bootstrap/scss/_functions",

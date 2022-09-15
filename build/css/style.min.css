@@ -4354,6 +4354,107 @@ a{
       visibility:hidden; }
 .styled-map a{
     visibility:hidden; }
+.leaders-slider{
+  margin-top:48px; }
+.leaders-slider__item{
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    -webkit-box-orient:vertical;
+    -webkit-box-direction:normal;
+        -ms-flex-direction:column;
+            flex-direction:column;
+    width:190px;
+    -webkit-filter:drop-shadow(0 1px 8px rgba(105, 81, 157, 0.25));
+            filter:drop-shadow(0 1px 8px rgba(105, 81, 157, 0.25)); }
+.leaders-slider__img{
+    width:100%;
+    height:190px;
+    background-color:#F9F8FF;
+    border-radius:16px 16px 0 0; }
+.leaders-slider__img img{
+      font-family:"object-fit:cover;object-position:center";
+      -o-object-fit:cover;
+         object-fit:cover;
+      -o-object-position:center;
+         object-position:center; }
+.leaders-slider__text{
+    position:relative;
+    z-index:1;
+    padding:16px;
+    margin-top:-16px;
+    font-weight:500;
+    text-align:center;
+    background-color:white;
+    border-radius:16px;
+    -webkit-box-shadow:0 1px 8px rgba(105, 81, 157, 0.25);
+            box-shadow:0 1px 8px rgba(105, 81, 157, 0.25); }
+.leaders-slider__name{
+    margin-bottom:4px;
+    font-size:14px; }
+.leaders-slider__position{
+    display:block;
+    margin-top:8px;
+    color:#815CD1; }
+.leaders-slider__info{
+    font-size:12px;
+    line-height:1.3em; }
+.leaders-slider__info span{
+      display:block; }
+.timeline li{
+  margin:0; }
+.timeline__year{
+  padding-left:32px; }
+.timeline__year:last-child .timeline__month:last-child{
+    padding-bottom:0; }
+.timeline__year-title{
+  padding:16px;
+  margin-bottom:48px;
+  background-color:#F9F8FF;
+  border-radius:16px; }
+.timeline__month{
+  position:relative;
+  padding-bottom:48px; }
+.timeline__month::before{
+    display:block !important;
+    content:"";
+    position:absolute;
+    top:5px;
+    bottom:-15px;
+    left:-27px;
+    width:2px;
+    background:repeating-linear-gradient(to bottom, #815CD1, #815CD1 16px, white 16px, white 28px); }
+.timeline__month:last-child::before{
+    display:none !important; }
+.timeline__month p:first-of-type{
+    margin-top:0; }
+.timeline__month-title{
+  position:relative;
+  margin-bottom:12px; }
+.timeline__month-title::after{
+    display:block;
+    content:"";
+    position:absolute;
+    top:4px;
+    left:-33px;
+    width:14px;
+    height:14px;
+    background-color:white;
+    border:2px solid #815CD1;
+    border-radius:50%; }
+.alert-success{
+  padding:24px;
+  margin:16px 0;
+  background-color:#F3FFF1;
+  border-radius:24px; }
+.alert-success__title{
+    margin-bottom:12px;
+    color:#00BA13; }
+.alert-success__text{
+    font-size:14px;
+    color:#0F172A; }
+.alert-success__text:first-of-type{
+      margin-top:0; }
 @media (min-width: 480px){
     dd{
       margin-left:1.5rem; }

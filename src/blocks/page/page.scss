@@ -219,8 +219,11 @@ a {
   padding-left: 0;
   list-style: none;
 
-  li::before {
-    display: none;
+  li {
+
+    &::before {
+      display: none;
+    }
   }
 }
 

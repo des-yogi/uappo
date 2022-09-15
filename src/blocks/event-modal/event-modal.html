@@ -124,7 +124,7 @@
           })
 
           <div class="text-input">
-            <span class="text-input__tip"></span>
+            <span class="text-input__tip">Дата народження</span>
             <div class="text-input__wrapper">
               <input id="eventId-11" class="text-input__field" type="date" name="date" value="" onblur="this.setAttribute('value', this.value);">
               <label class="text-input__label" for="eventId-11">
@@ -210,44 +210,44 @@
 
             @@include('../../blocks/text-input/text-input.html', {
               "id": "eventId-15",
-              "addClass": "",
+              "addClass": "hidden-field",
               "type": "text",
               "name": "official-full-name",
               "label": "ПІБ посадової особи",
-              "ifRequired": "required",
+              "ifRequired": "",
               "errorText": "",
               "tipText": ""
             })
 
             @@include('../../blocks/text-input/text-input.html', {
               "id": "eventId-16",
-              "addClass": "",
+              "addClass": "hidden-field",
               "type": "text",
               "name": "official-email",
               "label": "Email посадової особи",
-              "ifRequired": "required",
+              "ifRequired": "",
               "errorText": "",
               "tipText": ""
             })
 
             @@include('../../blocks/text-input/text-input.html', {
               "id": "eventId-17",
-              "addClass": "",
+              "addClass": "hidden-field",
               "type": "text",
               "name": "postal-code",
               "label": "Індекс",
-              "ifRequired": "required",
+              "ifRequired": "",
               "errorText": "",
               "tipText": ""
             })
 
             @@include('../../blocks/text-input/text-input.html', {
               "id": "eventId-18",
-              "addClass": "",
+              "addClass": "hidden-field",
               "type": "text",
               "name": "official-address",
               "label": "Адреса",
-              "ifRequired": "required",
+              "ifRequired": "",
               "errorText": "",
               "tipText": ""
             })
@@ -256,7 +256,7 @@
 
           <div class="field-checkbox form-reg__agreement" style="margin-bottom:0;">
             <label class="field-checkbox__name">
-              <input class="field-checkbox__input" type="checkbox" name="agreement" checked>
+              <input class="field-checkbox__input  agreement-field" type="checkbox" name="" checked>
               <span class="field-checkbox__name-text">Даю згоду на обробку персоналних данних</span>
             </label>
 

@@ -150,8 +150,8 @@
     }
 
     @media (min-width: $screen-xl) {
-      grid-template-columns: repeat(3, 1fr);
-      grid-template-rows: repeat(3, 1fr);
+      grid-template-columns: repeat(3, auto);
+      grid-template-rows: repeat(3, auto);
     }
 
     & > div {
@@ -198,6 +198,7 @@
   }
 
   &__grid-map {
+    align-items: flex-start !important;
     overflow: hidden;
 
     @media (min-width: $screen-md) {

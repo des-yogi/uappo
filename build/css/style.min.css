@@ -1945,6 +1945,8 @@ a[href^="tel:"]{ }
 .page-footer__menu-item{
     margin-top:0;
     margin-bottom:8px; }
+.page-footer__menu-item.active .page-footer__link{
+      color:#815CD1; }
 .page-footer__link{
     display:inline-block;
     vertical-align:baseline;

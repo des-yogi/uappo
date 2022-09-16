@@ -76,6 +76,13 @@
   &__menu-item {
     margin-top: 0;
     margin-bottom: 8px;
+
+    &.active {
+
+      #{$block-name}__link {
+        color: $main-color;
+      }
+    }
   }
 
   &__link {

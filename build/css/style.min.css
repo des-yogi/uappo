@@ -2864,6 +2864,9 @@ a{
     background-color:#F9F8FF;
     border-radius:24px; }
 .diag-index__grid-map{
+    -webkit-box-align:start !important;
+        -ms-flex-align:start !important;
+            align-items:flex-start !important;
     overflow:hidden; }
 .diag-index__table{
     width:100%;
@@ -5459,10 +5462,10 @@ a{
     .diag-index__stat{
       height:100%; }
       .diag-index__grid{
-        -ms-grid-columns:(1fr)[3];
-        grid-template-columns:repeat(3, 1fr);
-        -ms-grid-rows:(1fr)[3];
-        grid-template-rows:repeat(3, 1fr); }
+        -ms-grid-columns:(auto)[3];
+        grid-template-columns:repeat(3, auto);
+        -ms-grid-rows:(auto)[3];
+        grid-template-rows:repeat(3, auto); }
       .diag-index__grid-stat{
         -ms-grid-row:1;
         -ms-grid-row-span:1;

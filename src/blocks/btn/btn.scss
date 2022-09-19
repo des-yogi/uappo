@@ -41,9 +41,9 @@
   &--disabled,
   &:disabled {
     // opacity: $opacity;
+    //border-color: $gray-lighter;
     color: $text-muted;
     background-color: $btn-bg--disabled;
-    //border-color: $gray-lighter;
     cursor: not-allowed;
 
     @at-root a.btn--disabled {

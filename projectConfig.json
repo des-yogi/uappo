@@ -70,7 +70,8 @@
     "styled-map": [],
     "leaders-slider": [],
     "timeline": [],
-    "alert-success": []
+    "alert-success": [],
+    "no-records": []
   },
   "addCssBefore": [
     "../../node_modules/bootstrap/scss/_functions",

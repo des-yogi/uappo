@@ -4489,6 +4489,16 @@ a{
     color:#0F172A; }
 .alert-success__text:first-of-type{
       margin-top:0; }
+.no-records__alert{
+  margin-bottom:50px;
+  font-weight:500; }
+.no-records__img{
+  width:175px;
+  height:322px;
+  margin:0 auto; }
+.no-records__img img{
+    display:block;
+    width:100%; }
 @media (min-width: 480px){
     dd{
       margin-left:1.5rem; }
@@ -5195,7 +5205,10 @@ a{
     .user-account-blocked{
       padding:24px; }
     .styled-map{
-      height:320px; } }
+      height:320px; }
+    .no-records__img{
+      width:218px;
+      height:401px; } }
 @media (min-width: 768px) and (max-width: 1365px){
     .diag-index__stat-card-region-wrapper{
       display:-webkit-box;

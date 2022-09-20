@@ -6,24 +6,18 @@ document.addEventListener('DOMContentLoaded', function () {
   const avatar = document.getElementById('avatar');
   const image = document.getElementById('image');
   const input = document.getElementById('input');
-  //var $progress = $('.progress');
-  //var $progressBar = $('.progress-bar');
-  //var $alert = $('.alert');
-  //var $modal = $('#modal');
   const modalElem = document.getElementById('cropModal');
   if (!modalElem) return;
   const modal = new bootstrap.Modal(modalElem);
 
   let cropper;
 
-
+  if (!input) return;
   input.addEventListener('change', function (e) {
     let files = e.target.files;
     const done = function (url) {
       input.value = '';
       image.src = url;
-      //$alert.hide();
-      //$modal.modal('show');
       modal.show();
     };
 
@@ -80,7 +74,6 @@ document.addEventListener('DOMContentLoaded', function () {
       avatar.src = ava64; //$progress.show();
       //add after the main input one more input with this identifier, field type text
       document.getElementById('ava64').value = ava64;
-
     }
   });
 });

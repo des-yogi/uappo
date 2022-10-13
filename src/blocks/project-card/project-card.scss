@@ -35,8 +35,24 @@
     flex-direction: column;
   }
 
+  &__div-link {
+    align-self: flex-start;
+    font-size: $font-size-sm;
+    font-weight: 500;
+  }
+
   &__title {
-    margin-bottom: 8px;
+    margin: 8px 0;
+
+    a {
+      color: inherit;
+
+      &:hover,
+      &:focus {
+        color: $link-color--hover;
+        text-decoration: none;
+      }
+    }
   }
 
   &__descr {
@@ -71,15 +87,15 @@
   &__link {
     margin-left: auto;
 
-    &::after {
-      display: block;
-      content: "";
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-    }
+    // &::after {
+    //   display: block;
+    //   content: "";
+    //   position: absolute;
+    //   top: 0;
+    //   right: 0;
+    //   bottom: 0;
+    //   left: 0;
+    // }
   }
 
   &__link-wrapper {

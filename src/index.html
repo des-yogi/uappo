@@ -23,6 +23,51 @@
 
         @@include('blocks/projects-index/projects-index.html')
 
+        <div class="container  projects-index">
+          <div class="row">
+
+            <div class="projects-index__main-col  projects-index__main-col--fullwidth">
+              <section class="projects-index__main">
+
+                <div class="projects-index__header">
+                  <h2 class="projects-index__title">Відкрита наука</h2>
+                  <a class="btn btn--text  projects-index__link" href="#">Дивитись усі проекти</a>
+                </div>
+
+                <div class="row">
+
+                  <div class="projects-index__project-col">
+                    @@include('blocks/project-card/project-card.html', {
+                      "addClass": ""
+                    })
+                  </div>
+
+                  <div class="projects-index__project-col">
+                    @@include('blocks/project-card/project-card.html', {
+                      "addClass": ""
+                    })
+                  </div>
+
+                  <div class="projects-index__project-col">
+                    @@include('blocks/project-card/project-card.html', {
+                      "addClass": ""
+                    })
+                  </div>
+
+                  <div class="projects-index__project-col">
+                    @@include('blocks/project-card/project-card.html', {
+                      "addClass": ""
+                    })
+                  </div>
+
+                </div>
+
+              </section>
+            </div>
+
+          </div>
+        </div>
+
         @@include('blocks/partners-slider/partners-slider.html')
 
         @@include('blocks/events-index/events-index.html')

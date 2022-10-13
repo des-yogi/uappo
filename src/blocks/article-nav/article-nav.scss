@@ -30,6 +30,13 @@
     }
   }
 
+  &__container {
+
+    & > *:not(:last-child) {
+      margin-bottom: 24px;
+    }
+  }
+
   &__nav-item {
     margin: 0;
 

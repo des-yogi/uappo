@@ -7,13 +7,13 @@
 
   $block-name:                &; // #{$block-name}__element
 
-  &__img {
-    flex: 0 0 128px;
-  }
+  /* &__img {
+    flex: 0 0 130px;
+  } */
 
-  &__descr {
-    flex: 0 1 auto; // 138
-    margin-left: 12px;
-    font-weight: 500;
-  }
+  // &__descr {
+  //   flex: 0 1 auto; // 138
+  //   margin-left: 12px;
+  //   font-weight: 500;
+  // }
 }

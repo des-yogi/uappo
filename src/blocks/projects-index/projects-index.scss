@@ -15,6 +15,18 @@
     @media (max-width: $screen-md - 1) {
       margin-bottom: 24px;
     }
+
+    &--fullwidth {
+      @include col(xl, 12);
+
+      @media (max-width: $screen-md - 1) {
+        margin-bottom: 0;
+      }
+
+      #{$block-name}__project-col {
+        @include col(xl, 3);
+      }
+    }
   }
 
   &__aside-col {

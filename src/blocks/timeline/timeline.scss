@@ -74,4 +74,40 @@
       border-radius: 50%;
     }
   }
+
+  &__img-wrapper {
+    margin: 16px 0 0;
+
+    &--more {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      #{$block-name}__img {
+
+        &:first-child {
+          margin-bottom: 24px;
+
+          @media (min-width: $screen-md) {
+            margin-bottom: 0;
+          }
+        }
+
+        @media (min-width: $screen-md) {
+          flex: 0 1;
+          flex-basis: calc(50% - 12px);
+        }
+      }
+    }
+  }
+
+  #{$block-name}__img-wrapper + * {
+    margin-top: 16px;
+  }
+
+  &__img {
+    object-fit: cover;
+    object-position: center;
+    border-radius: $border-radius--lg;
+  }
 }

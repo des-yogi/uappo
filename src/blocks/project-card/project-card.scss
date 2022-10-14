@@ -115,4 +115,14 @@
       padding: 36px;
     }
   }
+
+  &--sidebar {
+    padding: 16px;
+    background-color: $block-bg;
+    border-radius: $border-radius--lg;
+
+    & + & {
+      margin-top: 16px;
+    }
+  }
 }

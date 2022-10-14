@@ -71,7 +71,8 @@
     "leaders-slider": [],
     "timeline": [],
     "alert-success": [],
-    "no-records": []
+    "no-records": [],
+    "upcoming-events": []
   },
   "addCssBefore": [
     "../../node_modules/bootstrap/scss/_functions",

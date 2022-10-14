@@ -1,0 +1,13 @@
+.upcoming-events {
+
+  $block-name:                &; // #{$block-name}__element
+
+  height: 100%;
+  padding: 24px;
+  background-color: $white;
+  border-radius: $border-radius--xl;
+
+  &__title {
+    margin-bottom: 16px;
+  }
+}

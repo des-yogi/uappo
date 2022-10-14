@@ -5,19 +5,11 @@
   display: flex;
   flex-direction: column;
   height: 100%;
-  padding: 88px 16px 24px; // top 24px + 64px
+  padding: 88px 24px 24px; // top 24px + 64px
   background-color: $white;
   background-image:
     linear-gradient(to bottom, $main-color, $main-color 64px, $white 64px);
   border-radius: $border-radius--xl;
-
-  @media (min-width: $screen-md) {
-    padding: 88px 24px 24px;
-  }
-
-  @media (min-width: $screen-md) {
-    padding: 88px 24px 36px;
-  }
 
   &__text {
     margin-bottom: 20px;

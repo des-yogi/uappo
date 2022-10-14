@@ -18,7 +18,7 @@
   &__item {
     padding: 16px;
     margin-top: 0;
-    margin-bottom: 24px;
+    margin-bottom: 16px;
     background-color: $block-bg;
     border-radius: $border-radius--lg;
 
@@ -52,5 +52,9 @@
     margin-top: 0;
     font-weight: 500;
     font-size: $font-size-sm;
+  }
+
+  &--nosticky {
+    position: static !important;
   }
 }

@@ -12,23 +12,33 @@
   }
 
   &__form-col,
-  &__info-col {
+  &__region-col {
     @include col(xs, 12, $grid-columns, 0);
     @include col-offset(md, 1);
     @include col(md, 10);
     @include col-offset(xl, 0);
     @include col(xl, 6);
+    margin-bottom: 24px;
   }
 
   &__form-col {
 
     @media (max-width: $screen-xl - 1) {
-      margin-bottom: 24px;
     }
   }
 
-  &__form-wrapper {
-    height: 100%;
+  &__info-col {
+    @include col(xs, 12, $grid-columns, 0);
+    @include col-offset(md, 1);
+    @include col(md, 10);
+    @include col-offset(xl, 0);
+    @include col(xl, 12);
+  }
+
+  &__form-wrapper,
+  &__info,
+  &__region,
+  &__press {
     padding: 24px 16px;
     background-color: $white;
     border-radius: $border-radius--xl;
@@ -36,151 +46,110 @@
     @media (min-width: $screen-md) {
       padding: 36px;
     }
+  }
+
+  &__form-wrapper,
+  &__info,
+  &__region-wrapper {
+    height: 100%;
   }
 
   &__form-title {
     margin-top: 0;
   }
 
-  &__info {
-    height: 100%;
-    padding: 24px 16px;
-    background-color: $white;
-    border-radius: $border-radius--xl;
+  &__region-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
 
-    @media (min-width: $screen-md) {
-      padding: 36px;
+  &__region {
+    flex: 1 1 auto;
+    margin-bottom: 24px;
+  }
+
+  &__press {
+    flex: 0 1 auto;
+  }
+
+  &__region-list {
+    overflow-x: auto;
+  }
+
+  &__region-item {
+    margin-top: 0 !important;
+    margin-bottom: 16px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    a {
+      display: inline-block;
+      vertical-align: baseline;
+      padding: 8px 0;
+      //font-size: 15px;
+      font-weight: 500;
+      color: $title-color;
+    }
+
+    p {
+      margin-top: 0 !important;
+      margin-bottom: 8px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      &:not(#{$block-name}__cap) {
+        font-size: 15px;
+      }
+    }
+
+    &--xl-half {
+      @include col(xs, 12, $grid-columns, 0);
+      @include col(md, 12);
+      @include col(xl, 6);
+    }
+  }
+
+  &__link-wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  &__link-dash {
+    margin-left: 16px;
+    white-space: nowrap;
+
+    &::before {
+      display: inline-block;
+      vertical-align: middle;
+      content: "—";
+      margin-right: 16px;
     }
   }
 
   &__caption {
-    display: block;
-    position: relative;
+    display: inline-flex;
+    align-items: center;
+    min-width: 128px;
+    white-space: nowrap;
 
-    @media (max-width: 412px - 1) {
+    svg {
+      width: 24px;
+      height: 24px;
+      margin-right: 8px;
+      fill: $title-color;
+    }
+    /* @media (max-width: 412px - 1) {
       font-size: 0;
       color: $white;
-    }
+    } */
   }
 
   .form-reg__agreement {
     margin-bottom: 0;
-  }
-
-  .table-mobile-scroll {
-    margin-bottom: 0;
-  }
-
-  .table {
-    border: none;
-
-    td,
-    th {
-      padding-top: 15px;
-      padding-bottom: 15px;
-      padding-left: 32px;
-      font-weight: 500;
-      font-size: $font-size-sm;
-      text-align: initial;
-      white-space: nowrap;
-      color: $title-color;
-      border: none;
-
-      &:first-child {
-        position: relative;
-        display: flex;
-        align-items: center;
-        min-width: 50px;
-        min-height: 50px;
-
-        &::before {
-          display: block;
-          content: "";
-          position: absolute;
-          top: 50%;
-          left: 0;
-          transform: translateY(-52%);
-          width: 24px;
-          height: 24px;
-          background-color: transparent;
-          background-position: center;
-          background-repeat: no-repeat;
-          background-size: 24px;
-        }
-
-        &.tel {
-
-          &::before {
-            background-image: svg-load('../blocks/sprite-svg/svg/call.svg', fill=$title-color);
-          }
-        }
-
-        &.email {
-
-          &::before {
-            background-image: svg-load('../blocks/sprite-svg/svg/sms.svg', fill=$title-color);
-          }
-        }
-
-        &.fb {
-
-          &::before {
-            background-image: svg-load('../blocks/sprite-svg/svg/facebook.svg', fill=$title-color);
-          }
-        }
-
-        &.ytb {
-
-          &::before {
-            background-image: svg-load('../blocks/sprite-svg/svg/youtube.svg', fill=$title-color);
-          }
-        }
-
-        &.tw {
-
-          &::before {
-            background-image: svg-load('../blocks/sprite-svg/svg/twitter.svg', fill=$title-color);
-          }
-        }
-
-        &.tg {
-
-          &::before {
-            background-image: svg-load('../blocks/sprite-svg/svg/telegram.svg', fill=$title-color);
-          }
-        }
-
-        &.snd-cloud {
-
-          &::before {
-            background-image: svg-load('../blocks/sprite-svg/svg/sound-cloud.svg', fill=$title-color);
-          }
-        }
-      }
-
-      &:last-child {
-        position: relative;
-
-        // @media (max-width: 412px - 1) {
-        //   font-size: $font-size-sm;
-        // }
-
-        &::before {
-          display: block;
-          content: "";
-          position: absolute;
-          top: 50%;
-          left: 0;
-          transform: translateY(-50%);
-          width: 15px;
-          height: 2px;
-          background-color: currentColor;
-        }
-
-        a {
-          color: inherit;
-        }
-      }
-    }
   }
 }

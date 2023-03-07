@@ -72,7 +72,8 @@
     "timeline": [],
     "alert-success": [],
     "no-records": [],
-    "upcoming-events": []
+    "upcoming-events": [],
+    "hero": []
   },
   "addCssBefore": [
     "../../node_modules/bootstrap/scss/_functions",
@@ -85,6 +86,7 @@
     "../../node_modules/bootstrap/scss/_accordion",
     "../../node_modules/bootstrap/scss/_modal",
     "../../node_modules/bootstrap/scss/_tooltip",
+    "../../node_modules/bootstrap/scss/_carousel",
     "../../node_modules/flickity/dist/flickity.min.css"
   ],
   "addCssAfter": [

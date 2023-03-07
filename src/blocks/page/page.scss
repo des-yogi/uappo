@@ -17,6 +17,7 @@
   -ms-text-size-adjust: 100%; // stylelint-disable-line  property-no-vendor-prefix
   min-width: 320px;
   min-height: 100%;
+  scroll-behavior: smooth;
 
   //font-size: 15px;
 
@@ -349,7 +350,7 @@ a {
 
 .col-test {
   @include col(xs, 12, $grid-columns, 0); // колонка без отступов
-  @include col(xs, 12, $grid-columns, 32px);
+  @include col(xs, 12,   $grid-columns, 32px);
   @include col(md, 12);
   @include col(xl, 8);
 }
@@ -569,4 +570,26 @@ a {
   }
 }
 
-// User account grid
+// BS Carousel
+.carousel-control-prev,
+.carousel-control-next {
+  visibility: hidden;
+  position: static;
+  width: 48px;
+  height: 48px;
+  color: $main-color;
+  background-color: $btn-bg;
+  border-radius: $border-radius--lg;
+  opacity: 1;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    color: $white;
+    background-color: $btn-bg--active;
+  }
+
+  @media (min-width: $screen-md) {
+    visibility: visible;
+  }
+}

@@ -10,6 +10,7 @@
       @@include('../../blocks/logo/logo.html')
 
       <div class="page-header__serv-menu-wrapper  page-header__serv-menu-wrapper--dt-hidden">
+
         <div class="page-header__serv-menu-inner  page-header__serv-menu-inner--mob-hidden">
           <button class="page-header__btn  page-header__btn--search" type="button" title="Поиск" data-bs-toggle="modal" data-bs-target="#searchModal">
             <svg width="18" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#search-normal"></use></svg>
@@ -68,31 +69,39 @@
 
     <!-- Мобильное меню начало -->
     <div class="container  container--std  page-header__menu-wrapper  collapse" id="mobMenu">
-      <div class="page-header__serv-menu-inner  page-header__serv-menu-inner--tablet-hidden">
-        <button class="page-header__btn  page-header__btn--search" type="button" title="Поиск" data-bs-toggle="modal" data-bs-target="#searchModal">
-          <svg width="18" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#search-normal"></use></svg>
-          <span class="visually-hidden">Найти на сайте</span>
-        </button>
 
-        <div class="dropdown  lang-switcher">
-          <button class="page-header__btn  page-header__btn--lang-sw  dropdown-toggle" type="button" id="langSwitcherMob" data-bs-toggle="dropdown" aria-expanded="false" title="Выбор языка">
-            <svg width="18" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#global"></use></svg>
-            <span class="visually-hidden">Выбор языка</span>
+      <div class="page-header__slogan">
+        <p class="page-header__slogan-text">Поодинці ми сильні, <span>разом ми могутні</span>!</p>
+        <a href="#" class="btn">
+          <svg width="18" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#profile-add"></use></svg>
+          <span>Приєднатися</span>
+        </a>
+
+        <div class="page-header__serv-menu-inner  page-header__serv-menu-inner--tablet-hidden">
+          <button class="page-header__btn  page-header__btn--search" type="button" title="Поиск" data-bs-toggle="modal" data-bs-target="#searchModal">
+            <svg width="18" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#search-normal"></use></svg>
+            <span class="visually-hidden">Найти на сайте</span>
           </button>
-          <ul class="dropdown-menu" aria-labelledby="langSwitcherMob">
-            <li class="active"><a class="dropdown-item">UA</a></li>
-            <li><a class="dropdown-item" href="#">RU</a></li>
-            <li><a class="dropdown-item" href="#">EN</a></li>
-          </ul>
-        </div>
 
-        <!-- <button class="page-header__btn  page-header__btn--user" type="button" title="Аккаунт пользователя" data-bs-toggle="modal" data-bs-target="#loginModal">
-          <svg width="18" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#profile-circle"></use></svg>
-          <span class="page-header__user-name">MT</span>
-          <span class="visually-hidden">Аккаунт пользователя</span>
-        </button> -->
+          <div class="dropdown  lang-switcher">
+            <button class="page-header__btn  page-header__btn--lang-sw  dropdown-toggle" type="button" id="langSwitcherMob" data-bs-toggle="dropdown" aria-expanded="false" title="Выбор языка">
+              <svg width="18" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#global"></use></svg>
+              <span class="visually-hidden">Выбор языка</span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="langSwitcherMob">
+              <li class="active"><a class="dropdown-item">UA</a></li>
+              <li><a class="dropdown-item" href="#">RU</a></li>
+              <li><a class="dropdown-item" href="#">EN</a></li>
+            </ul>
+          </div>
 
-        <div class="dropdown  page-header__login">
+          <!-- <button class="page-header__btn  page-header__btn--user" type="button" title="Аккаунт пользователя" data-bs-toggle="modal" data-bs-target="#loginModal">
+            <svg width="18" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#profile-circle"></use></svg>
+            <span class="page-header__user-name">MT</span>
+            <span class="visually-hidden">Аккаунт пользователя</span>
+          </button> -->
+
+          <div class="dropdown  page-header__login">
             <button class="page-header__btn  page-header__btn--user" type="button" title="Аккаунт пользователя" id="userLogInMob" data-bs-toggle="dropdown" aria-expanded="false">
               <span class="page-header__login-icon-wrapper">
                 <img src="img/profile-photo.jpg" alt="Alt text" width="36" height="36" loading="lazy" decoding="async">
@@ -116,14 +125,7 @@
             </ul>
           </div>
 
-      </div>
-
-      <div class="page-header__slogan">
-        <p class="page-header__slogan-text">Поодинці ми сильні, <span>разом ми могутні</span>!</p>
-        <a href="#" class="btn">
-          <svg width="18" height="18"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#profile-add"></use></svg>
-          <span>Приєднатися</span>
-        </a>
+        </div>
       </div>
 
       <nav class="main-nav">
@@ -138,10 +140,13 @@
             <a href="#" class="main-nav__link">Події</a>
           </li>
           <li class="main-nav__item">
-            <a href="#" class="main-nav__link">Проекти</a>
+            <a href="#" class="main-nav__link">Ініціативи</a>
           </li>
           <li class="main-nav__item">
-            <a href="#" class="main-nav__link">Річна звітність</a>
+            <a href="#" class="main-nav__link">Публічна інформація</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="#" class="main-nav__link">Відкрита наука</a>
           </li>
           <li class="main-nav__item">
             <a href="#" class="main-nav__link">Контакти</a>

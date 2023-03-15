@@ -83,9 +83,6 @@
     }
   }
 
-  &__container {
-  }
-
   &__serv-menu-wrapper {
 
     @media (min-width: $screen-md) {
@@ -119,6 +116,11 @@
 
     &--tablet-hidden {
 
+      @media (max-width: $screen-md - 1) {
+        order: -1;
+        margin-bottom: 16px;
+      }
+
       @media (min-width: $screen-md) {
         display: none;
       }
@@ -126,7 +128,7 @@
       @media (min-width: $screen-xl) {
         display: inline-flex;
         order: 1;
-        margin-left: auto;
+        margin-left: 32px;
       }
     }
   }
@@ -181,7 +183,7 @@
 
     @media (max-width: $screen-md - 1) {
       flex-direction: column;
-      margin-top: 16px;
+      //margin-top: 16px;
     }
 
     @media (min-width: $screen-md) {

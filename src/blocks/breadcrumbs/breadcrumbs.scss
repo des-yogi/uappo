@@ -35,13 +35,15 @@
   }
 
   &__list {
-    display: inline-flex;
-    flex-wrap: wrap;
+    display: flex;
+    //flex-wrap: wrap;
     align-items: center;
+    overflow-x: auto;
   }
 
 
   &__item {
+    flex: 0 0 auto;
     display: inline-block;
     vertical-align: baseline;
     max-width: 100%;
